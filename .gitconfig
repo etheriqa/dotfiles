@@ -1,0 +1,7 @@
+[user]
+	name = etheriqa
+	email = etheriqa@gmail.com
+[color]
+	ui = auto
+[credential]
+	helper = osxkeychain
