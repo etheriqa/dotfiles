@@ -7,6 +7,7 @@ endif
 
 
 " bundles {{{2
+NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'Shougo/neocomplcache'
@@ -20,9 +21,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'vim-scripts/Align'
 
-"let g:Align_xstrlen = 3
 let g:quickrun_config = {}
 
 
@@ -49,7 +48,7 @@ nnoremap <Down> <C-w><C-j>
 nnoremap <Up> <C-w><C-k>
 nnoremap <Right> <C-w><C-l>
 
-vnoremap <Space>a :Align 
+vnoremap <Space>a :Alignta 
 vnoremap <Space>s :sort 
 
 
