@@ -23,6 +23,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'ujihisa/unite-colorscheme'
 
 let g:quickrun_config = {}
+let g:neocomplcache_enable_at_startup = 1
 
 
 
