@@ -192,6 +192,7 @@ autocmd FileType php setlocal
   \ tabstop<
   \ softtabstop=4
   \ shiftwidth=4
+let php_folding = 1
 let g:ref_phpmanual_path = expand('~/doc/php-chunked-xhtml/')
 
 
