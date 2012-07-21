@@ -9,6 +9,8 @@ endif
 " bundles {{{2
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'mattn/webapi-vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
@@ -22,8 +24,11 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'ujihisa/unite-colorscheme'
 
-let g:quickrun_config = {}
+let g:gist_detect_filetype = 1
+let g:gist_show_privates = 1
+let g:gist_post_private = 1
 let g:neocomplcache_enable_at_startup = 1
+let g:quickrun_config = {}
 
 
 
@@ -38,6 +43,7 @@ nnoremap <Space>gm :<C-u>Gmove<CR>
 nnoremap <Space>gr :<C-u>Gread<CR>
 nnoremap <Space>gs :<C-u>Gstatus<CR>
 nnoremap <Space>gw :<C-u>Gwrite<CR>
+nnoremap <Space>Gp :<C-u>Gist<CR>
 nnoremap <Space>h :<C-u>split<CR>
 nnoremap <Space>q :<C-u>quit<CR>
 nnoremap <Space>r :<C-u>QuickRun<CR>
