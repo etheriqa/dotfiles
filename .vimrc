@@ -133,7 +133,7 @@ autocmd FileType coffee setlocal
   \ tabstop<
   \ softtabstop=2
   \ shiftwidth=2
-autocmd BufWritePost *.coffee silent CoffeeMake! -cb | cwindow | redraw!
+autocmd BufWritePost *.coffee silent CoffeeMake! --compile | cwindow | redraw!
 
 
 " CSS {{{2
