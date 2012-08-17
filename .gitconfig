@@ -12,3 +12,9 @@
 	editor = /usr/bin/vim
 [github]
 	user = etheriqa
+[alias]
+	co = checkout
+	st = status
+	cm = commit -v
+	br = branch
+	cp = cherry-pick
