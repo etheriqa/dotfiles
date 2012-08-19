@@ -7,6 +7,7 @@ endif
 
 
 " bundles {{{2
+NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/gist-vim'
@@ -230,6 +231,14 @@ autocmd FileType ruby setlocal
 
 " Sass {{{2
 autocmd FileType sass setlocal
+  \ expandtab
+  \ tabstop<
+  \ softtabstop=2
+  \ shiftwidth=2
+
+
+" Scala {{{2
+autocmd FileType scala setlocal
   \ expandtab
   \ tabstop<
   \ softtabstop=2
