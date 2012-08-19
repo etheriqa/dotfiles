@@ -100,7 +100,6 @@ set listchars=tab:☞\ ,trail:-
 colorscheme jellybeans
 set directory=~/.vim/tmp
 
- 
 
 
 
@@ -109,6 +108,7 @@ set directory=~/.vim/tmp
 syntax enable
 filetype plugin indent on
 set autoindent
+set expandtab tabstop< softtabstop=2 shiftwidth=2
 
 
 " C {{{2
