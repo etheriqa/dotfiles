@@ -5,7 +5,8 @@ autoload -U compinit && compinit
 autoload -U colors && colors
 
 bindkey -v
-alias v="vi"
+alias v="vim"
+alias vi="vim"
 alias g="git"
 
 export EDITOR=vi
