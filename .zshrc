@@ -9,7 +9,7 @@ alias v="vim"
 alias vi="vim"
 alias g="git"
 
-export EDITOR=vi
+export EDITOR=vim
 
 autoload -Uz vcs_info
 precmd() {
