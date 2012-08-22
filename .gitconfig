@@ -9,7 +9,7 @@
 	helper = osxkeychain
 [core]
 	excludesfile = /Users/etheriqa/.gitignore
-	editor = /usr/bin/vim
+	editor = vim
 [github]
 	user = etheriqa
 [alias]
