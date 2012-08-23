@@ -13,8 +13,13 @@
 [github]
 	user = etheriqa
 [alias]
+	b = branch
+	bs = bisect
+	c = commit -v
 	co = checkout
-	st = status
-	cm = commit -v
-	br = branch
 	cp = cherry-pick
+	m = merge
+	pl = pull --rebase
+	ps = push
+	s = status
+	st = stash
