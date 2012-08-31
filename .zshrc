@@ -1,15 +1,7 @@
-export PATH=$HOME/bin:$HOME/.rbenv/shims:$HOME/.phpenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
-export LANG=en_US.UTF-8
-
 autoload -U compinit && compinit
 autoload -U colors && colors
 
 bindkey -v
-alias v="vim"
-alias vi="vim"
-alias g="git"
-
-export EDITOR=vim
 
 autoload -Uz vcs_info
 precmd() {
@@ -21,3 +13,4 @@ precmd() {
 PROMPT="
 %{${fg[green]}%}%n@%m%{${reset_color}%}:%~ %1v
 %# "
+
