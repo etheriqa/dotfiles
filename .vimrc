@@ -9,6 +9,7 @@ endif
 " bundles {{{2
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
