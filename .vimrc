@@ -93,7 +93,7 @@ set incsearch
 
 " edit {{{1
 set encoding=utf-8
-set fileencoding=utf-8
+set fileencodings=utf-8,euc-jp,sjis
 set autoindent
 set history=100
 set undolevels=1000
