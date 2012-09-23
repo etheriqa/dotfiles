@@ -1,7 +1,7 @@
 [include]
 	path = .gitconfig.local
 [user]
-	name = etheriqa
+	name = Kaede Takamori
 	email = etheriqa@gmail.com
 [color]
 	ui = auto
