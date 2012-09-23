@@ -13,13 +13,22 @@
 [github]
 	user = etheriqa
 [alias]
+	a = add
 	b = branch
+	bl = blame
 	bs = bisect
 	c = commit -v
 	co = checkout
 	cp = cherry-pick
+	d = diff
+	f = fetch
+	g = grep
 	m = merge --no-ff
 	pl = pull --rebase
 	ps = push
+	r = reset
+	rb = rebase
+	rv = revert
 	s = status
+	sm = submodule
 	st = stash
