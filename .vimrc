@@ -104,6 +104,8 @@ set listchars=tab:☞\ ,trail:-
 colorscheme jellybeans
 set directory=~/.vim/tmp
 set shell=/bin/zsh
+set modeline
+set modelines=2
 
 
 
