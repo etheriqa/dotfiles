@@ -1,5 +1,6 @@
+# vim:noet:ts=8:sw=8:sts=8:
 [include]
-	path = .gitconfig.local
+	path = ~/.gitconfig.local
 [user]
 	name = Kaede Takamori
 	email = etheriqa@gmail.com
@@ -8,7 +9,7 @@
 [credential]
 	helper = osxkeychain
 [core]
-	excludesfile = /Users/etheriqa/.gitignore
+	excludesfile = ~/.gitignore
 	editor = vim
 [github]
 	user = etheriqa
