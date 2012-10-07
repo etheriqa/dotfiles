@@ -108,6 +108,8 @@ set directory=~/.vim/tmp
 set shell=/bin/zsh
 set modeline
 set modelines=2
+set autoread
+set updatetime=100
 
 
 
