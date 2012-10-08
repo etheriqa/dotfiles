@@ -9,13 +9,13 @@ endif
 " bundles {{{2
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'othree/html5.vim'
-NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
@@ -28,6 +28,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'vim-jp/vimdoc-ja'
 
 let g:gist_detect_filetype = 1
 let g:gist_show_privates = 1
@@ -110,6 +111,7 @@ set modeline
 set modelines=2
 set autoread
 set updatetime=100
+set helplang=ja,en
 
 
 
