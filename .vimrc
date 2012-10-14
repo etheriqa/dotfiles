@@ -21,7 +21,6 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
-NeoBundle 'skammer/vim-css-color'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'tpope/vim-fugitive'
@@ -31,8 +30,8 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
 
 let g:gist_detect_filetype = 1
-let g:gist_show_privates = 1
 let g:gist_post_private = 1
+let g:gist_show_privates = 1
 let g:neocomplcache_enable_at_startup = 1
 let g:quickrun_config = {}
 let g:quickrun_config['*'] = {'runmode': "async:remote:vimproc", 'split': 'below'}
