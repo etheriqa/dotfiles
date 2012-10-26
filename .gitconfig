@@ -40,6 +40,7 @@
 	m = merge --no-ff
 	ma = merge --abort
 	mc = merge --continue
+	mf = merge --ff
 	pl = pull --rebase
 	ps = push
 	ra = remote add
