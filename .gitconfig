@@ -32,8 +32,8 @@
 	cob = checkout -b
 	coo = checkout --ours
 	cot = checkout --theirs
-	cp = cherry-pick
 	d = diff
+	dc = diff --cached
 	f = fetch
 	fa = fetch --all
 	g = grep
@@ -41,6 +41,7 @@
 	ma = merge --abort
 	mc = merge --continue
 	mf = merge --ff
+	p = cherry-pick
 	pl = pull --rebase
 	ps = push
 	ra = remote add
