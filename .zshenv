@@ -6,5 +6,6 @@ alias v="vim"
 alias vi="vim"
 alias g="git"
 alias gi="git"
+alias pu="phpunit --strict --colors"
 
 if [ -f $HOME/.zshenv.local ]; then . $HOME/.zshenv.local; fi
