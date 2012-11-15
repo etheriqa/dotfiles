@@ -36,6 +36,7 @@
 	dc = diff --cached
 	f = fetch
 	fa = fetch --all
+	fo = fetch origin
 	g = grep
 	m = merge --no-ff
 	ma = merge --abort
