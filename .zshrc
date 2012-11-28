@@ -1,6 +1,8 @@
 autoload -U compinit && compinit
 autoload -U colors && colors
 
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 bindkey -v
 
 autoload -Uz vcs_info
