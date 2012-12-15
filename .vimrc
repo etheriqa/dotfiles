@@ -20,6 +20,7 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'thinca/vim-quickrun'
@@ -36,21 +37,23 @@ let g:gist_show_privates = 1
 let g:neocomplcache_enable_at_startup = 1
 let g:quickrun_config = {}
 let g:quickrun_config['*'] = {'runmode': "async:remote:vimproc", 'split': 'below'}
+let g:vimfiler_as_default_explorer = 1
 
 
 
 
 " keymaps {{{1
-nnoremap <Space>gC :<C-u>Gcommit -v --amend<CR>
+nnoremap <Space>f :<C-u>VimFiler<CR>
 nnoremap <Space>gb :<C-u>Gblame<CR>
+nnoremap <Space>gC :<C-u>Gcommit -v --amend<CR>
 nnoremap <Space>gc :<C-u>Gcommit -v<CR>
 nnoremap <Space>gd :<C-u>Gdiff<CR>
 nnoremap <Space>gg :<C-u>Ggrep 
 nnoremap <Space>gm :<C-u>Gmove<CR>
+nnoremap <Space>Gp :<C-u>Gist<CR>
 nnoremap <Space>gr :<C-u>Gread<CR>
 nnoremap <Space>gs :<C-u>Gstatus<CR>
 nnoremap <Space>gw :<C-u>Gwrite<CR>
-nnoremap <Space>Gp :<C-u>Gist<CR>
 nnoremap <Space>h :<C-u>split<CR>
 nnoremap <Space>q :<C-u>quit<CR>
 nnoremap <Space>r :<C-u>QuickRun<CR>
