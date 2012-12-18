@@ -7,14 +7,19 @@ endif
 
 
 " bundles {{{2
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'croaker/mustang-vim'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'jeffreyiacono/vim-colors-wombat'
+NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
@@ -23,13 +28,17 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
+NeoBundle 'therubymug/vim-pyte'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
+NeoBundle 'tomasr/molokai'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
+NeoBundle 'vim-scripts/Lucius'
+NeoBundle 'vim-scripts/Zenburn'
 
 let g:gist_detect_filetype = 1
 let g:gist_post_private = 1
@@ -107,6 +116,7 @@ set undolevels=1000
 set showcmd
 set list
 set listchars=tab:☞\ ,trail:-
+set background=dark
 colorscheme jellybeans
 set directory=~/.vim/tmp
 set shell=/bin/zsh
