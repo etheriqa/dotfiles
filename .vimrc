@@ -39,6 +39,7 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'vim-scripts/Lucius'
 NeoBundle 'vim-scripts/Zenburn'
+NeoBundle 'vol2223/vim-colorblind-colorscheme'
 
 let g:gist_detect_filetype = 1
 let g:gist_post_private = 1
