@@ -10,6 +10,7 @@ endif
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'croaker/mustang-vim'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'jeffreyiacono/vim-colors-wombat'
@@ -65,6 +66,8 @@ nnoremap <Space>gr :<C-u>Gread<CR>
 nnoremap <Space>gs :<C-u>Gstatus<CR>
 nnoremap <Space>gw :<C-u>Gwrite<CR>
 nnoremap <Space>h :<C-u>split<CR>
+nnoremap <Space>ml :<C-u>MemoList<CR>
+nnoremap <Space>mn :<C-u>MemoNew<CR>
 nnoremap <Space>q :<C-u>quit<CR>
 nnoremap <Space>r :<C-u>QuickRun<CR>
 nnoremap <Space>s :<C-u>VimShell<CR>
