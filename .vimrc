@@ -99,6 +99,7 @@ set statusline=
   \%8(%l,%v%)
   \%8(%P%)
 set foldmethod=marker
+set ambiwidth=double
 
 
 
@@ -119,7 +120,7 @@ set history=100
 set undolevels=1000
 set showcmd
 set list
-set listchars=tab:☞\ ,trail:-
+set listchars=tab:➭\ ,trail:-
 set background=dark
 colorscheme jellybeans
 set directory=~/.vim/tmp
