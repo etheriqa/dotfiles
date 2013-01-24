@@ -54,7 +54,7 @@ let g:vimfiler_as_default_explorer = 1
 
 
 " keymaps {{{1
-nnoremap <Space>f :<C-u>Unite file_rec/async<CR>
+nnoremap <Space>f :<C-u>VimFiler<CR>
 nnoremap <Space>gb :<C-u>Gblame<CR>
 nnoremap <Space>gC :<C-u>Gcommit -v --amend<CR>
 nnoremap <Space>gc :<C-u>Gcommit -v<CR>
@@ -71,6 +71,8 @@ nnoremap <Space>mn :<C-u>MemoNew<CR>
 nnoremap <Space>q :<C-u>quit<CR>
 nnoremap <Space>r :<C-u>QuickRun<CR>
 nnoremap <Space>s :<C-u>VimShell<CR>
+nnoremap <Space>uf :<C-u>Unite file_rec/async<CR>
+nnoremap <Space>um :<C-u>Unite file_mru<CR>
 nnoremap <Space>v :<C-u>vsplit<CR>
 nnoremap <Space>w :<C-u>write<CR>
 nnoremap <Left> <C-w><C-h>
