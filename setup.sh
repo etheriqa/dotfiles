@@ -1,8 +1,9 @@
 #!/bin/sh
 
-DOT_FILES=( .zshrc .zshenv .tmux.conf .vimrc .gvimrc .gitconfig .gitignore )
+cd `dirname $0`
 
-for file in ${DOT_FILES[@]}
-do
-  ln -fsv $HOME/work/dotfiles/$file $HOME/$file
+for dotfile in `git ls-files`; do
+  if [ $dotfile != `basename $0` ]; then
+    ln -fsv `pwd`/$dotfile $HOME/$dotfile
+  fi
 done
