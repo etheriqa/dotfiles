@@ -17,3 +17,13 @@ local color_hostname=${color_hostname:-$fg[green]}
 PROMPT="
 %{${color_hostname}%}%n@%m%{${reset_color}%}:%~ %1v
 %# "
+
+alias g="git"
+alias gi="git"
+alias l="ls -l"
+alias la="ls -a -l"
+alias lp="ionice -c2 -n7 nice -n 19"
+alias pu="phpunit --colors --strict --verbose --debug"
+alias t="tmux"
+alias v="vim"
+alias vi="vim"
