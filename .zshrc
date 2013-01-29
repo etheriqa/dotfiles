@@ -1,6 +1,13 @@
 autoload -U compinit && compinit
 autoload -U colors && colors
 
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+setopt hist_ignore_dups
+setopt share_history
+setopt extended_history
+
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 bindkey -v
