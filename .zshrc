@@ -32,7 +32,7 @@ alias la="ls -a -l"
 alias lp="ionice -c2 -n7 nice -n 19"
 alias pu="phpunit --colors --strict --verbose --debug"
 alias s="ssh"
-alias t="tmux"
+alias t="tmux attach 2> /dev/null || tmux new"
 alias v="vim"
 alias vi="vim"
 
