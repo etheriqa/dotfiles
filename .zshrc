@@ -25,6 +25,7 @@ PROMPT="
 %{${color_hostname}%}%n@%m%{${reset_color}%}:%~ %1v
 %# "
 
+alias c="clear"
 alias g="git"
 alias gi="git"
 alias l="ls -l"
