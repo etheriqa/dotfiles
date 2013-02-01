@@ -1,6 +1,6 @@
 export LANG=en_US.UTF-8
 export EDITOR=vim
-export TERM=xterm-256color
+export TERM=screen-256color
 
 case $OSTYPE in
   darwin*)
