@@ -18,6 +18,7 @@
 	b = branch
 	bb = bisect bad
 	bd = branch -d
+	bD = branch -D
 	bg = bisect good
 	bl = blame
 	bm = branch -m
