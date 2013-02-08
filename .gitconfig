@@ -56,7 +56,7 @@
 	rr = remote rm
 	rs = reset --soft
 	rv = revert
-	s = status
+	s = status --short
 	sc = stash clear
 	sl = stash list
 	sm = submodule
