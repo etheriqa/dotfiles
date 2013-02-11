@@ -30,7 +30,6 @@ alias g="git"
 alias gi="git"
 alias l="ls -l"
 alias la="ls -a -l"
-alias lp="ionice -c2 -n7 nice -n 19"
 alias pu="phpunit --colors --strict --verbose"
 alias s="ssh"
 alias t="tmux attach 2> /dev/null || tmux new"
@@ -38,3 +37,14 @@ alias v="vim"
 alias vi="vim"
 
 st() { ssh -t "$1" 'tmux attach || tmux new'; }
+
+case $OSTYPE in
+  darwin*)
+    if [ -f $HOME/.zshrc.darwin ]; then . $HOME/.zshrc.darwin; fi
+    ;;
+  linux*)
+    if [ -f $HOME/.zshrc.linux ]; then . $HOME/.zshrc.linux; fi
+    ;;
+esac
+
+if [ -f $HOME/.zshrc.local ]; then . $HOME/.zshrc.local; fi
