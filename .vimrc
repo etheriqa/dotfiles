@@ -234,14 +234,6 @@ let php_sql_query = 1
 let g:ref_phpmanual_path = expand('~/doc/php-chunked-xhtml/')
 
 
-" PHPUnit {{{2
-augroup QuickRunPHPUnit
-  autocmd!
-  autocmd BufWinEnter,BufNewFile *Test.php setlocal filetype=php.unit
-augroup END
-let g:quickrun_config['php.unit'] = {'command': 'phpunit'}
-
-
 " RSpec {{{2
 augroup QuickRunRSpec
   autocmd!
