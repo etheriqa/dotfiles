@@ -14,6 +14,12 @@ if [ -d $HOME/.phpenv ]; then
   eval "$(phpenv init - zsh)"
 fi
 
+# nodebrew
+if [ -d $HOME/.nodebrew ]; then
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
+  export NODEBREW_ROOT=$HOME/.nodebrew
+fi
+
 case $OSTYPE in
   darwin*)
     if [ -f $HOME/.zshenv.darwin ]; then . $HOME/.zshenv.darwin; fi
