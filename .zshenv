@@ -8,6 +8,12 @@ if [ -d $HOME/.rbenv ]; then
   eval "$(rbenv init - zsh)"
 fi
 
+# phpenv
+if [ -d $HOME/.phpenv ]; then
+  export PATH=$HOME/.phpenv/bin:$PATH
+  eval "$(phpenv init - zsh)"
+fi
+
 case $OSTYPE in
   darwin*)
     if [ -f $HOME/.zshenv.darwin ]; then . $HOME/.zshenv.darwin; fi
