@@ -20,6 +20,11 @@ if [ -d $HOME/.nodebrew ]; then
   export NODEBREW_ROOT=$HOME/.nodebrew
 fi
 
+# pythonbrew
+if [ -f $HOME/.pythonbrew/etc/bashrc ]; then
+  source $HOME/.pythonbrew/etc/bashrc
+fi
+
 case $OSTYPE in
   darwin*)
     if [ -f $HOME/.zshenv.darwin ]; then . $HOME/.zshenv.darwin; fi
