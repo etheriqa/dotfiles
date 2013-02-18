@@ -36,7 +36,7 @@ alias t="tmux attach 2> /dev/null || tmux new"
 alias v="vim"
 alias vi="vim"
 
-st() { ssh -t "$1" 'tmux attach || tmux new'; }
+st() { ssh -t "$1" 'tmux attach 2> /dev/null || tmux new'; }
 
 case $OSTYPE in
   darwin*)
