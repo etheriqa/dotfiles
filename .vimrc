@@ -62,7 +62,6 @@ nnoremap <Space>gc :<C-u>Gcommit -v<CR>
 nnoremap <Space>gd :<C-u>Gdiff<CR>
 nnoremap <Space>gg :<C-u>Ggrep 
 nnoremap <Space>gm :<C-u>Gmove<CR>
-nnoremap <Space>Gp :<C-u>Gist<CR>
 nnoremap <Space>gr :<C-u>Gread<CR>
 nnoremap <Space>gs :<C-u>Gstatus<CR>
 nnoremap <Space>gw :<C-u>Gwrite<CR>
