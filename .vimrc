@@ -69,6 +69,9 @@ nnoremap <Space>m :<C-u>Unite file_mru<CR>
 nnoremap <Space>q :<C-u>quit<CR>
 nnoremap <Space>r :<C-u>QuickRun<CR>
 nnoremap <Space>s :<C-u>VimShell<CR>
+nnoremap <Space>tn :<C-u>tabnext<CR>
+nnoremap <Space>tp :<C-u>tabprevious<CR>
+nnoremap <Space>tt :<C-u>tabnew<CR>
 nnoremap <Space>v :<C-u>vsplit<CR>
 nnoremap <Space>w :<C-u>write<CR>
 nnoremap <Left> <C-w><C-h>
