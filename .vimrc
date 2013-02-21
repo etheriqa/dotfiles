@@ -49,6 +49,7 @@ let g:neocomplcache_enable_at_startup = 1
 let g:quickrun_config = {}
 let g:quickrun_config['*'] = {'runmode': "async:remote:vimproc", 'split': 'below'}
 let g:vimfiler_as_default_explorer = 1
+let g:unite_source_file_mru_limit = 1000
 
 
 
