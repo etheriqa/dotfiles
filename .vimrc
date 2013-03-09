@@ -78,10 +78,6 @@ nnoremap <Space>um :<C-u>Unite file_mru<CR>
 nnoremap <Space>ur :<C-u>Unite file_rec/async<CR>
 nnoremap <Space>v :<C-u>vsplit<CR>
 nnoremap <Space>w :<C-u>write<CR>
-nnoremap <Left> <C-w><C-h>
-nnoremap <Down> <C-w><C-j>
-nnoremap <Up> <C-w><C-k>
-nnoremap <Right> <C-w><C-l>
 nnoremap : ;
 nnoremap ; :
 
