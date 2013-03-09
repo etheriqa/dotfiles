@@ -55,36 +55,52 @@ let g:unite_source_file_mru_limit = 1000
 
 
 " keymaps {{{1
-nnoremap <Space>f :<C-u>VimFiler<CR>
-nnoremap <Space>gb :<C-u>Gblame<CR>
-nnoremap <Space>gC :<C-u>Gcommit -v --amend<CR>
-nnoremap <Space>gc :<C-u>Gcommit -v<CR>
-nnoremap <Space>gd :<C-u>Gdiff<CR>
-nnoremap <Space>gg :<C-u>Ggrep 
-nnoremap <Space>gr :<C-u>Gread<CR>
-nnoremap <Space>gs :<C-u>Gstatus<CR>
-nnoremap <Space>gw :<C-u>Gwrite<CR>
-nnoremap <Space>h :<C-u>split<CR>
-nnoremap <Space>q :<C-u>quit<CR>
-nnoremap <Space>r :<C-u>QuickRun<CR>
-nnoremap <Space>s :<C-u>VimShell<CR>
-nnoremap <Space>tn :<C-u>tabnext<CR>
-nnoremap <Space>tp :<C-u>tabprevious<CR>
-nnoremap <Space>tt :<C-u>tabnew<CR>
-nnoremap <Space>u<Space> :<C-u>Unite 
-nnoremap <Space>ub :<C-u>Unite buffer<CR>
-nnoremap <Space>um :<C-u>Unite file<CR>
-nnoremap <Space>um :<C-u>Unite file_mru<CR>
-nnoremap <Space>ur :<C-u>Unite file_rec/async<CR>
-nnoremap <Space>v :<C-u>vsplit<CR>
-nnoremap <Space>w :<C-u>write<CR>
+
+
+" basic {{{2
+
+nnoremap <silent> <Space>c :<C-u>close<CR>
+nnoremap <silent> <Space>q :<C-u>quit<CR>
+nnoremap <silent> <Space>w :<C-u>write<CR>
+
+nnoremap <silent> <Space>h :<C-u>split<CR>
+nnoremap <silent> <Space>v :<C-u>vsplit<CR>
+
 nnoremap : ;
 nnoremap ; :
-
-vnoremap <Space>a :Alignta 
-vnoremap <Space>s :sort i<CR>
 vnoremap : ;
 vnoremap ; :
+
+
+" edit {{{2
+nnoremap <silent> tn :tabnext<CR>
+nnoremap <silent> tp :tabprevious<CR>
+
+vnoremap a :Alignta<Space>
+vnoremap <silent> s :sort i<CR>
+
+
+" git {{{2
+nnoremap <silent> <Space>gb :<C-u>Gblame<CR>
+nnoremap <silent> <Space>gC :<C-u>Gcommit -v --amend<CR>
+nnoremap <silent> <Space>gc :<C-u>Gcommit -v<CR>
+nnoremap <silent> <Space>gd :<C-u>Gdiff<CR>
+nnoremap <silent> <Space>gg :<C-u>Ggrep<Space>
+nnoremap <silent> <Space>gr :<C-u>Gread<CR>
+nnoremap <silent> <Space>gs :<C-u>Gstatus<CR>
+nnoremap <silent> <Space>gw :<C-u>Gwrite<CR>
+
+
+" unite {{{2
+nnoremap <Space>u<Space> :<C-u>Unite<Space>
+nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
+nnoremap <silent> <Space>uf :<C-u>Unite file<CR>
+nnoremap <silent> <Space>um :<C-u>Unite file_mru<CR>
+nnoremap <silent> <Space>ur :<C-u>Unite file_rec/async<CR>
+
+
+" others {{{2
+nnoremap <Space>r :<C-u>QuickRun<CR>
 
 
 
