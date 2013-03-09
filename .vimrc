@@ -79,9 +79,13 @@ nnoremap <Left> <C-w><C-h>
 nnoremap <Down> <C-w><C-j>
 nnoremap <Up> <C-w><C-k>
 nnoremap <Right> <C-w><C-l>
+nnoremap : ;
+nnoremap ; :
 
 vnoremap <Space>a :Alignta 
 vnoremap <Space>s :sort 
+vnoremap : ;
+vnoremap ; :
 
 
 
