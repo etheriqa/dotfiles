@@ -55,7 +55,6 @@ let g:unite_source_file_mru_limit = 1000
 
 
 " keymaps {{{1
-nnoremap <Space>b :<C-u>Unite buffer<CR>
 nnoremap <Space>f :<C-u>VimFiler<CR>
 nnoremap <Space>gb :<C-u>Gblame<CR>
 nnoremap <Space>gC :<C-u>Gcommit -v --amend<CR>
@@ -66,13 +65,17 @@ nnoremap <Space>gr :<C-u>Gread<CR>
 nnoremap <Space>gs :<C-u>Gstatus<CR>
 nnoremap <Space>gw :<C-u>Gwrite<CR>
 nnoremap <Space>h :<C-u>split<CR>
-nnoremap <Space>m :<C-u>Unite file_mru<CR>
 nnoremap <Space>q :<C-u>quit<CR>
 nnoremap <Space>r :<C-u>QuickRun<CR>
 nnoremap <Space>s :<C-u>VimShell<CR>
 nnoremap <Space>tn :<C-u>tabnext<CR>
 nnoremap <Space>tp :<C-u>tabprevious<CR>
 nnoremap <Space>tt :<C-u>tabnew<CR>
+nnoremap <Space>u<Space> :<C-u>Unite 
+nnoremap <Space>ub :<C-u>Unite buffer<CR>
+nnoremap <Space>um :<C-u>Unite file<CR>
+nnoremap <Space>um :<C-u>Unite file_mru<CR>
+nnoremap <Space>ur :<C-u>Unite file_rec/async<CR>
 nnoremap <Space>v :<C-u>vsplit<CR>
 nnoremap <Space>w :<C-u>write<CR>
 nnoremap <Left> <C-w><C-h>
