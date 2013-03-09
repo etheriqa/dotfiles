@@ -86,7 +86,7 @@ nnoremap : ;
 nnoremap ; :
 
 vnoremap <Space>a :Alignta 
-vnoremap <Space>s :sort 
+vnoremap <Space>s :sort i<CR>
 vnoremap : ;
 vnoremap ; :
 
