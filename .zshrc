@@ -19,7 +19,7 @@ precmd() {
   psvar[1]=$vcs_info_msg_0_
 }
 
-local color_hostname=${color_hostname:-$fg[green]}
+local color_hostname=${color_hostname:-$fg[white]}
 
 PROMPT="
 %{${color_hostname}%}%n@%m%{${reset_color}%}:%~ %1v
