@@ -61,6 +61,7 @@ let g:unite_source_file_mru_limit = 1000
 " basic {{{2
 
 nnoremap <silent> <Space>c :<C-u>close<CR>
+nnoremap <silent> <Space>q :<C-u>quit<CR>
 nnoremap <silent> <Space>w :<C-u>write<CR>
 
 nnoremap <silent> <Space>h :<C-u>split<CR>
