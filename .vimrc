@@ -109,7 +109,7 @@ nnoremap <Space>r :<C-u>QuickRun<CR>
 
 
 " display {{{1
-set number
+set relativenumber
 set laststatus=2
 set statusline=
   \%y
