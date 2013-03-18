@@ -9,20 +9,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 
 " bundles {{{2
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'croaker/mustang-vim'
 NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'jeffreyiacono/vim-colors-wombat'
-NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'mattn/gist-vim'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/zencoding-vim'
-NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
@@ -38,22 +29,14 @@ NeoBundle 'Shougo/vimproc', {
   \   },
   \ }
 NeoBundle 'Shougo/vimshell'
-NeoBundle 'therubymug/vim-pyte'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
-NeoBundle 'tomasr/molokai'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
-NeoBundle 'vim-scripts/Lucius'
-NeoBundle 'vim-scripts/Zenburn'
-NeoBundle 'vol2223/vim-colorblind-colorscheme'
 
-let g:gist_detect_filetype = 1
-let g:gist_post_private = 1
-let g:gist_show_privates = 1
 let g:neocomplcache_enable_at_startup = 1
 let g:quickrun_config = {}
 let g:quickrun_config['*'] = {'runmode': "async:remote:vimproc", 'split': 'below'}
