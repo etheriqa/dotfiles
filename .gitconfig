@@ -43,6 +43,7 @@
 	ma = merge --abort
 	mc = merge --continue
 	mf = merge --ff
+	ms = merge --squash
 	p = cherry-pick
 	pl = pull --rebase
 	ps = push
