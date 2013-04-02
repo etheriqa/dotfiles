@@ -20,7 +20,7 @@
 	bd = branch -d
 	bD = branch -D
 	bg = bisect good
-	bl = blame
+	bl = blame -w
 	bm = branch -m
 	br = bisect reset
 	bs = bisect start
