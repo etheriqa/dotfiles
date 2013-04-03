@@ -45,7 +45,7 @@
 	mf = merge --ff
 	ms = merge --squash
 	p = cherry-pick
-	pl = pull --rebase
+	pl = pull
 	ps = push
 	ra = remote add
 	rb = rebase
@@ -66,3 +66,5 @@
 	ss = stash save
 [push]
 	default = current
+[pull]
+	rebase = true
