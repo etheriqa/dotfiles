@@ -17,11 +17,11 @@
 	au = add --update
 	b = branch
 	bb = bisect bad
-	bd = branch -d
+	bd = branch --delete
 	bD = branch -D
 	bg = bisect good
 	bl = blame -w
-	bm = branch -m
+	bm = branch --move
 	br = bisect reset
 	bs = bisect start
 	c = commit --verbose
