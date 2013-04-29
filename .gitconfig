@@ -39,10 +39,10 @@
 	fa = fetch --all
 	fo = fetch origin
 	g = grep
-	m = merge --no-ff
+	m = merge
 	ma = merge --abort
 	mc = merge --continue
-	mf = merge --ff
+	mf = merge --ff-only
 	ms = merge --squash
 	p = cherry-pick
 	pl = pull
@@ -68,3 +68,5 @@
 	default = current
 [pull]
 	rebase = true
+[merge]
+	ff = false
