@@ -42,7 +42,7 @@
 	m = merge --no-ff
 	ma = merge --abort
 	mc = merge --continue
-	mf = merge --ff
+	mf = merge --ff-only
 	ms = merge --squash
 	p = cherry-pick
 	pl = pull
