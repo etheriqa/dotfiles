@@ -70,3 +70,5 @@
 	rebase = true
 [rerere]
 	enabled = true
+[merge]
+	log = true
