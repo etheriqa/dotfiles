@@ -64,6 +64,8 @@
 	smu = submodule update
 	sp = stash pop
 	ss = stash save
+[init]
+	templatedir = ~/.git-templates
 [push]
 	default = current
 [pull]
