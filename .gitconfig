@@ -65,7 +65,7 @@
 	sp = stash pop
 	ss = stash save
 [init]
-	templatedir = ~/.git-templates
+	templatedir = ~/.git_templates
 [push]
 	default = current
 [pull]
