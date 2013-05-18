@@ -30,11 +30,29 @@ alias l="ls -l"
 alias la="ls -a -l"
 alias pu="phpunit --colors --strict --verbose"
 alias s="ssh"
-alias t="tmux attach 2> /dev/null || tmux new"
 alias v="vim"
 alias vi="vim"
 
-st() { ssh -t "$1" 'tmux attach 2> /dev/null || tmux new'; }
+t() {
+  if [ -z $1 ]; then
+    tmux attach 2> /dev/null || tmux new
+  elif tmux has -t $1 2> /dev/null; then
+    tmux attach -t $1
+  else
+    tmux new -s $1
+  fi
+}
+
+st() {
+  if [ -z $1 ]; then
+    echo "no hostname given"
+    return 1
+  elif [ -z $2 ]; then
+    ssh -t $1 "tmux attach 2> /dev/null || tmux new"
+  else
+    ssh -t $1 "if tmux has -t $2 2> /dev/null; then tmux attach -t $2; else tmux new -s $2; fi"
+  fi
+}
 
 case $OSTYPE in
   darwin*)
