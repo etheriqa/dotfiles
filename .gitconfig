@@ -13,6 +13,9 @@
 	user = etheriqa
 [alias]
 	a = add
+	ama = am --abort
+	amc = am --continue
+	ams = am --skip
 	ap = add --patch
 	au = add --update
 	b = branch
