@@ -1,2 +1,2 @@
 #!/bin/sh
-#git diff --cached --name-only -- '*.php'|xargs --max-args 1 --no-run-if-empty php -l
+#git diff --cached --diff-filter=AM --name-only -- '*.php'|xargs -n 1 -r php -l
