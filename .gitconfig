@@ -70,7 +70,7 @@
 [init]
 	templatedir = ~/.git_templates
 [push]
-	default = current
+	default = nothing
 [pull]
 	rebase = true
 [rerere]
