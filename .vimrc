@@ -131,6 +131,9 @@ set incsearch
 " edit {{{1
 set encoding=utf-8
 set fileencodings=utf-8,euc-jp,sjis
+set fileencoding=utf-8
+set fileformats=unix,dos,mac
+set fileformat=unix
 set autoindent
 set history=100
 set undolevels=1000
