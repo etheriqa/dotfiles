@@ -1,4 +1,5 @@
 export LANG=en_US.UTF-8
+export LANGUAGE=en_US:en
 export EDITOR=vim
 export TERM=screen-256color
 
