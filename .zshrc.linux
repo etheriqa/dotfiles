@@ -1,1 +1,1 @@
-alias lp="ionice -c3 nice -n 19"
+alias lp="ionice -c2 -n7 nice -n 19"
