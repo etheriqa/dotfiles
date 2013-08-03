@@ -29,6 +29,7 @@ NeoBundle 'Shougo/vimproc', {
   \   },
   \ }
 NeoBundle 'Shougo/vimshell'
+NeoBundle 'sophacles/vim-processing'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'tpope/vim-fugitive'
@@ -251,6 +252,18 @@ let php_htmlInStrings = 1
 let php_noShortTags = 1
 let php_sql_query = 1
 let g:ref_phpmanual_path = expand('~/doc/php-chunked-xhtml/')
+
+
+" Processing {{{2
+autocmd FileType processing setlocal
+  \ expandtab
+  \ tabstop<
+  \ softtabstop=4
+  \ shiftwidth=4
+let g:quickrun_config['processing'] = {
+  \ 'command': 'processing-java',
+  \ 'exec': '%c --sketch=`dirname %s` --output=$HOME/Library/Processing --run --force'
+  \ }
 
 
 " RSpec {{{2
