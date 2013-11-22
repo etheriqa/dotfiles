@@ -70,7 +70,7 @@ vnoremap ; :
 " edit {{{2
 nnoremap <silent> tn :tabnext<CR>
 nnoremap <silent> tp :tabprevious<CR>
-nnoremap <silent> T a<C-r>=strftime("%Y-%m-%d %T")<CR><Esc>
+nnoremap <silent> T i<C-r>=strftime("%Y-%m-%d %T")<CR><Esc>
 
 vnoremap a :Alignta<Space>
 vnoremap <silent> s :sort i<CR>
