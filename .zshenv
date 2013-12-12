@@ -21,9 +21,11 @@ if [ -x $HOME/.nodebrew/current/bin/nodebrew ]; then
   export NODEBREW_ROOT=$HOME/.nodebrew
 fi
 
-# pythonbrew
-if [ -r $HOME/.pythonbrew/etc/bashrc ]; then
-  source $HOME/.pythonbrew/etc/bashrc
+# pyenv
+if [ -x $HOME/.pyenv/bin/pyenv ]; then
+  export PYENV_ROOT=$HOME/.pyenv
+  export PATH=$PYENV_ROOT/bin:$PATH
+  eval "$(pyenv init -)"
 fi
 
 case $OSTYPE in
