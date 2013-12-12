@@ -1,4 +1,4 @@
-autoload -U compinit && compinit
+autoload -U compinit && compinit -u
 autoload -U colors && colors
 
 HISTFILE=$HOME/.zsh_history
