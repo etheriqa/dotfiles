@@ -1,9 +1,9 @@
 # vim:noet:ts=8:sw=8:sts=8:
-[include]
-	path = ~/.gitconfig.local
 [user]
 	name = Kaede Takamori
 	email = etheriqa@gmail.com
+[include]
+	path = ~/.gitconfig.local
 [color]
 	ui = auto
 [core]
