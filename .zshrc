@@ -1,3 +1,12 @@
+case $OSTYPE in
+  darwin*)
+    if [ -f $HOME/.zshrc.darwin ]; then . $HOME/.zshrc.darwin; fi
+    ;;
+  linux*)
+    if [ -f $HOME/.zshrc.linux ]; then . $HOME/.zshrc.linux; fi
+    ;;
+esac
+
 autoload -U compinit && compinit -u
 autoload -U colors && colors
 
@@ -108,14 +117,5 @@ st() {
     ssh -t $1 "if tmux has -t $2 2> /dev/null; then tmux attach -t $2; else tmux new -s $2; fi"
   fi
 }
-
-case $OSTYPE in
-  darwin*)
-    if [ -f $HOME/.zshrc.darwin ]; then . $HOME/.zshrc.darwin; fi
-    ;;
-  linux*)
-    if [ -f $HOME/.zshrc.linux ]; then . $HOME/.zshrc.linux; fi
-    ;;
-esac
 
 if [ -f $HOME/.zshrc.local ]; then . $HOME/.zshrc.local; fi

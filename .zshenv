@@ -1,3 +1,12 @@
+case $OSTYPE in
+  darwin*)
+    if [ -f $HOME/.zshenv.darwin ]; then . $HOME/.zshenv.darwin; fi
+    ;;
+  linux*)
+    if [ -f $HOME/.zshenv.linux ]; then . $HOME/.zshenv.linux; fi
+    ;;
+esac
+
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en
 export EDITOR=vim
@@ -32,14 +41,5 @@ fi
 if [ -x $HOME/.cabal/bin ]; then
   export PATH=$HOME/.cabal/bin:$PATH
 fi
-
-case $OSTYPE in
-  darwin*)
-    if [ -f $HOME/.zshenv.darwin ]; then . $HOME/.zshenv.darwin; fi
-    ;;
-  linux*)
-    if [ -f $HOME/.zshenv.linux ]; then . $HOME/.zshenv.linux; fi
-    ;;
-esac
 
 if [ -f $HOME/.zshenv.local ]; then . $HOME/.zshenv.local; fi
