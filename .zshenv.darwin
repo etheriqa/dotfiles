@@ -1,2 +1,5 @@
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:${PATH}
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
+
+# for boot2docker
+export DOCKER_HOST=tcp://localhost:4243
