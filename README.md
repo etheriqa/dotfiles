@@ -1,0 +1,5 @@
+## Requirements
+
+* coreutils
+* git
+* make
