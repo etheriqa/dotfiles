@@ -164,6 +164,14 @@ set autoindent
 set expandtab tabstop< softtabstop=2 shiftwidth=2
 
 
+" BIND {{{2
+autocmd FileType bindzone setlocal
+  \ noexpandtab
+  \ tabstop=8
+  \ softtabstop=8
+  \ shiftwidth=8
+
+
 " C {{{2
 autocmd FileType c setlocal
   \ expandtab
