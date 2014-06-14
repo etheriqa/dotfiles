@@ -30,7 +30,7 @@ precmd() {
 
 PROMPT="
 %{[38;5;${colorcode}m%}%n@%m%{${reset_color}%}:%~ %1v
-%(?.(*^◯^*%).(*^◯...) %#  "
+%# "
 
 alias c="clear"
 alias g="git"
