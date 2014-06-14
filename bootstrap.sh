@@ -1,5 +1,5 @@
 #!/bin/bash
 
-git clone https://github.com/etheriqa/dotfiles.git
-cd dotfiles
+git clone https://github.com/etheriqa/dotfiles.git $PREFIX/dotfiles && \
+cd $PREFIX/dotfiles && \
 make install
