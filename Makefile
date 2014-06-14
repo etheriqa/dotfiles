@@ -1,5 +1,7 @@
 .PHONY: update install uninstall dotfiles vim
 
+PREFIX:=$(HOME)
+
 DOTFILES:=\
     .ctags\
     .git_templates\
@@ -22,16 +24,16 @@ update:
 install: dotfiles vim
 
 dotfiles:
-	ln -Fs $(foreach dotfile,$(DOTFILES),$(PWD)/$(dotfile)) $(HOME)
-	touch $(HOME)/.vimrc.local
-	touch $(HOME)/.zshenv.local
-	touch $(HOME)/.zshrc.local
+	ln -Fs $(foreach dotfile,$(DOTFILES),$(PWD)/$(dotfile)) $(PREFIX)
+	touch $(PREFIX)/.vimrc.local
+	touch $(PREFIX)/.zshenv.local
+	touch $(PREFIX)/.zshrc.local
 
 vim:
-	mkdir -p $(HOME)/.vim/bundle
-	mkdir -p $(HOME)/.vim/tmp
-	git clone https://github.com/Shougo/neobundle.vim $(HOME)/.vim/bundle/neobundle.vim
+	mkdir -p $(PREFIX)/.vim/bundle
+	mkdir -p $(PREFIX)/.vim/tmp
+	git clone https://github.com/Shougo/neobundle.vim $(PREFIX)/.vim/bundle/neobundle.vim
 
 uninstall:
-	rm -f $(foreach dotfile,$(DOTFILES),$(HOME)/$(dotfile))
-	rm -fr $(HOME)/.vim
+	rm -f $(foreach dotfile,$(DOTFILES),$(PREFIX)/$(dotfile))
+	rm -fr $(PREFIX)/.vim
