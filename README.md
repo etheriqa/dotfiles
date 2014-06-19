@@ -7,5 +7,6 @@ curl https://raw.githubusercontent.com/etheriqa/dotfiles/master/bootstrap.sh | P
 ## Requirements
 
 * coreutils
+* gcc
 * git
 * make
