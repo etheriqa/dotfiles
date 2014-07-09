@@ -4,6 +4,9 @@ export _MANPATH=${_MANPATH-$MANPATH}
 export PATH=$_PATH
 export MANPATH=$_MANPATH
 
+# for homebrew
+export PATH=/usr/local/bin:${PATH}
+
 # for coreutils
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:${PATH}
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
