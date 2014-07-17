@@ -8,15 +8,16 @@ DOTFILES:=\
     .gitconfig\
     .gitignore\
     .gvimrc\
+    .my.cnf\
     .tigrc\
     .tmux.conf\
     .vimrc\
-    .zshenv\
     .zshenv.darwin\
     .zshenv.linux\
-    .zshrc\
+    .zshenv\
     .zshrc.darwin\
     .zshrc.linux\
+    .zshrc\
 
 update:
 	git pull --rebase
