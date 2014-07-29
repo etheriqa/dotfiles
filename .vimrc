@@ -212,6 +212,16 @@ autocmd FileType cucumber setlocal
   \ shiftwidth=2
 
 
+
+" gitconfig {{{2
+autocmd FileType gitconfig setlocal
+  \ noexpandtab
+  \ tabstop=8
+  \ softtabstop=8
+  \ shiftwidth=8
+
+
+
 " Haml {{{2
 autocmd FileType css setlocal
   \ expandtab
