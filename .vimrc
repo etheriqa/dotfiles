@@ -334,6 +334,15 @@ autocmd FileType smarty setlocal
   \ shiftwidth=2
 
 
+" SQL {{{2
+autocmd FileType sql setlocal
+  \ expandtab
+  \ tabstop<
+  \ softtabstop=2
+  \ shiftwidth=2
+let g:sql_type_default='mysql'
+
+
 " Vim script {{{2
 autocmd FileType vim setlocal
   \ expandtab
