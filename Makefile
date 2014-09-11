@@ -1,4 +1,4 @@
-.PHONY: update install uninstall dotfiles vim
+.PHONY: update install uninstall dotfiles vim anyenv
 
 PREFIX:=$(HOME)
 
@@ -22,7 +22,7 @@ DOTFILES:=\
 update:
 	git pull --rebase
 
-install: dotfiles vim
+install: dotfiles vim anyenv
 
 dotfiles:
 	ln -Fs $(foreach dotfile,$(DOTFILES),$(PWD)/$(dotfile)) $(PREFIX)
@@ -36,6 +36,10 @@ vim:
 	mkdir -p $(PREFIX)/.vim/tmp
 	git clone https://github.com/Shougo/neobundle.vim $(PREFIX)/.vim/bundle/neobundle.vim
 
+anyenv:
+	git clone https://github.com/riywo/anyenv $(PREFIX)/.anyenv
+
 uninstall:
 	rm -f $(foreach dotfile,$(DOTFILES),$(PREFIX)/$(dotfile))
 	rm -fr $(PREFIX)/.vim
+	rm -fr $(PREFIX)/.anyenv
