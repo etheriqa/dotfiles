@@ -97,6 +97,8 @@ alias pu="phpunit --colors --strict --verbose"
 alias s="ssh"
 alias v="vim"
 alias vi="vim"
+alias vie="vim -R"
+alias view="vim -R"
 
 t() {
   if [ -z $1 ]; then
