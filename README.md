@@ -1,7 +1,7 @@
 ## Install
 
 ```sh
-curl https://raw.githubusercontent.com/etheriqa/dotfiles/master/bootstrap.sh | PREFIX=PATH_TO_DIR bash
+PREFIX=PATH_TO_DIR bash <(curl -L https://github.com/etheriqa/dotfiles/raw/master/bootstrap.sh)
 ```
 
 ## Requirements
