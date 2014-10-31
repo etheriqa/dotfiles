@@ -40,6 +40,7 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
+NeoBundle 'vim-scripts/gtags.vim'
 
 let g:neocomplcache_enable_at_startup = 1
 let g:quickrun_config = {}
@@ -63,6 +64,10 @@ nnoremap <silent> <Space>w :<C-u>write<CR>
 nnoremap <silent> <Space>h :<C-u>split<CR>
 nnoremap <silent> <Space>v :<C-u>vsplit<CR>
 
+nnoremap <silent> <C-n> :<C-u>cnext<CR>
+nnoremap <silent> <C-p> :<C-u>cprevious<CR>
+nnoremap <silent> <C-c> :<C-u>cclose<CR>
+
 nnoremap : ;
 nnoremap ; :
 vnoremap : ;
@@ -72,9 +77,8 @@ vnoremap ; :
 " edit {{{2
 nnoremap <silent> tn :tabnext<CR>
 nnoremap <silent> tp :tabprevious<CR>
-nnoremap <silent> T i<C-r>=strftime("%Y-%m-%d %T")<CR><Esc>
 
-vnoremap a :Alignta<Space>
+vnoremap          a<Space> :Alignta<Space>
 vnoremap <silent> s :sort i<CR>
 
 
@@ -87,6 +91,14 @@ nnoremap <silent> <Space>gg :<C-u>Ggrep<Space>
 nnoremap <silent> <Space>gr :<C-u>Gread<CR>
 nnoremap <silent> <Space>gs :<C-u>Gstatus<CR>
 nnoremap <silent> <Space>gw :<C-u>Gwrite<CR>
+
+
+" global {{{2
+nnoremap          <C-g><Space> :<C-u>Gtags<Space>
+nnoremap <silent> <C-g>c :<C-u>GtagsCursor<CR>
+nnoremap <silent> <C-g>f :<C-u>Gtags -f %<CR>
+nnoremap          <C-g>g :<C-u>Gtags -g<Space>
+nnoremap          <C-g>r :<C-u>Gtags -r<Space>
 
 
 " unite {{{2
