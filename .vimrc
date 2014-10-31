@@ -174,113 +174,65 @@ set helplang=ja,en
 syntax enable
 filetype plugin indent on
 set autoindent
-set expandtab tabstop< softtabstop=2 shiftwidth=2
+set expandtab tabstop=8 softtabstop=4 shiftwidth=4
+
+command! -nargs=1 SpaceIndent
+  \ setlocal
+  \ expandtab
+  \ tabstop<
+  \ softtabstop=<args>
+  \ shiftwidth=<args>
+
+command! -nargs=1 TabIndent
+  \ setlocal
+  \ noexpandtab
+  \ tabstop=<args>
+  \ softtabstop=0
+  \ shiftwidth=<args>
 
 
 " BIND {{{2
-autocmd FileType bindzone setlocal
-  \ noexpandtab
-  \ tabstop=8
-  \ softtabstop=8
-  \ shiftwidth=8
+autocmd FileType bindzone TabIndent 8
 
 
-" C {{{2
-autocmd FileType c setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
-
-
-" C++ {{{2
-autocmd FileType cpp setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
+" C, C++ {{{2
+autocmd FileType c,cpp SpaceIndent 2
 
 
 " CoffeeScript {{{2
-autocmd FileType coffee setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
+autocmd FileType coffee SpaceIndent 2
 
 
-" CSS {{{2
-autocmd FileType css setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
+" CSS, SASS, SCSS {{{2
+autocmd FileType css,sass,scss SpaceIndent 2
 
 
 " Cucumber {{{2
-autocmd FileType cucumber setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
-
+autocmd FileType cucumber SpaceIndent 2
 
 
 " gitconfig {{{2
-autocmd FileType gitconfig setlocal
-  \ noexpandtab
-  \ tabstop=8
-  \ softtabstop=8
-  \ shiftwidth=8
-
-
-
-" Haml {{{2
-autocmd FileType css setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
+autocmd FileType gitconfig TabIndent 8
 
 
 " Haskell {{{2
-autocmd FileType haskell setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=4
-  \ shiftwidth=4
+autocmd FileType haskell SpaceIndent 4
 
 
 " HTML {{{2
-autocmd FileType html setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
+autocmd FileType html SpaceIndent 2
 
 
 " JavaScript {{{2
-autocmd FileType javascript setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
+autocmd FileType javascript SpaceIndent 2
 
 
 " Markdown {{{2
-autocmd FileType markdown setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=4
-  \ shiftwidth=4
+autocmd FileType markdown SpaceIndent 4
 
 
 " PHP {{{2
-autocmd FileType php setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=4
-  \ shiftwidth=4
+autocmd FileType php SpaceIndent 4
 let php_htmlInStrings = 1
 let php_noShortTags = 1
 let php_sql_query = 1
@@ -288,11 +240,7 @@ let g:ref_phpmanual_path = expand('~/doc/php-chunked-xhtml/')
 
 
 " Processing {{{2
-autocmd FileType processing setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=4
-  \ shiftwidth=4
+autocmd FileType processing SpaceIndent 4
 let g:quickrun_config['processing'] = {
   \ 'command': 'processing-java',
   \ 'exec': '%c --sketch=`dirname %s` --output=$HOME/Library/Processing --run --force'
@@ -308,60 +256,24 @@ let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
 
 
 " Ruby {{{2
-autocmd FileType ruby setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
-
-
-" Sass {{{2
-autocmd FileType sass setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
+autocmd FileType ruby SpaceIndent 2
 
 
 " Scala {{{2
-autocmd FileType scala setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
-
-
-" Scss {{{2
-autocmd FileType scss setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
+autocmd FileType scala SpaceIndent 2
 
 
 " Smarty {{{2
-autocmd FileType smarty setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
+autocmd FileType smarty SpaceIndent 2
 
 
 " SQL {{{2
-autocmd FileType sql setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
+autocmd FileType sql SpaceIndent 2
 let g:sql_type_default='mysql'
 
 
 " Vim script {{{2
-autocmd FileType vim setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=2
-  \ shiftwidth=2
+autocmd FileType vim SpaceIndent 2
 let g:vim_indent_cont = 2
 
 
