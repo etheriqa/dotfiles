@@ -197,6 +197,7 @@ autocmd FileType bindzone TabIndent 8
 
 " C, C++ {{{2
 autocmd FileType c,cpp SpaceIndent 2
+autocmd BufWinEnter,BufNewFile *.ic setlocal filetype=cpp
 
 
 " CoffeeScript {{{2
