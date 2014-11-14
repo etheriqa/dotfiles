@@ -119,17 +119,6 @@ nnoremap <Space>r :<C-u>QuickRun<CR>
 " display {{{1
 set relativenumber
 set laststatus=2
-set statusline=
-  \%y
-  \%{'['.(&fenc!=''?&fenc:&enc).']'}
-  \%{'['.&ff.']'}\ 
-  \%<
-  \%f\ 
-  \%m
-  \%=
-  \%{fugitive#statusline()}
-  \%8(%l,%v%)
-  \%8(%P%)
 set foldmethod=marker
 set ambiwidth=double
 
@@ -157,7 +146,9 @@ set showcmd
 set list
 set listchars=tab:➭\ ,trail:-
 set background=dark
-colorscheme jellybeans
+if neobundle#is_installed("jellybeans.vim")
+  colorscheme jellybeans
+endif
 set directory=~/.vim/tmp
 set shell=/bin/zsh
 set modeline

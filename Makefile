@@ -21,6 +21,7 @@ DOTFILES:=\
 
 update:
 	git pull --rebase
+	vim -c "silent NeoBundleUpdate" -c quit
 
 install: dotfiles vim anyenv
 
@@ -35,6 +36,7 @@ vim:
 	mkdir -p $(PREFIX)/.vim/bundle
 	mkdir -p $(PREFIX)/.vim/tmp
 	git clone https://github.com/Shougo/neobundle.vim $(PREFIX)/.vim/bundle/neobundle.vim
+	vim -c "silent NeoBundleInstall" -c quit
 
 anyenv:
 	git clone https://github.com/riywo/anyenv $(PREFIX)/.anyenv
