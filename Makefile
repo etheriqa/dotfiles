@@ -29,8 +29,8 @@ dotfiles:
 	ln -Fs $(foreach dotfile,$(DOTFILES),$(PWD)/$(dotfile)) $(PREFIX)
 	touch $(PREFIX)/.gitconfig.local
 	touch $(PREFIX)/.vimrc.local
-	touch $(PREFIX)/.zshenv.local
 	touch $(PREFIX)/.zshrc.local
+	echo "local colorcode=15" > $(PREFIX)/.zshenv.local
 
 vim:
 	mkdir -p $(PREFIX)/.vim/bundle
