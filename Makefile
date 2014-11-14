@@ -30,7 +30,7 @@ dotfiles:
 	touch $(PREFIX)/.gitconfig.local
 	touch $(PREFIX)/.vimrc.local
 	touch $(PREFIX)/.zshrc.local
-	echo "local colorcode=15" > $(PREFIX)/.zshenv.local
+	echo "local colorcode=nico" > $(PREFIX)/.zshenv.local
 
 vim:
 	mkdir -p $(PREFIX)/.vim/bundle

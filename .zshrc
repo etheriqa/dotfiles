@@ -28,6 +28,36 @@ precmd() {
   psvar[1]=$vcs_info_msg_0_
 }
 
+case $colorcode in
+  honoka*)
+    local colorcode=208
+    ;;
+  eli*)
+    local colorcode=87
+    ;;
+  kotori*)
+    local colorcode=247
+    ;;
+  umi*)
+    local colorcode=27
+    ;;
+  rin*)
+    local colorcode=190
+    ;;
+  maki*)
+    local colorcode=196
+    ;;
+  nozomi*)
+    local colorcode=55
+    ;;
+  hanayo*)
+    local colorcode=47
+    ;;
+  nico*)
+    local colorcode=199
+    ;;
+esac
+
 PROMPT="
 %{[38;5;${colorcode-15}m%}%n@%m%{${reset_color}%}:%~ %1v
 %# "
