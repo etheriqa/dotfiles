@@ -1,3 +1,3 @@
-set transparency=20
+set transparency=10
 set background=light
 colorscheme jellybeans
