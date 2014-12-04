@@ -112,6 +112,7 @@ nnoremap <silent> <Space>ur :<C-u>Unite file_rec/async<CR>
 " others {{{2
 nnoremap <Space>f :<C-u>VimFiler<CR>
 nnoremap <Space>r :<C-u>QuickRun<CR>
+nnoremap <Space>s :<C-u>VimShell<CR>
 
 
 
