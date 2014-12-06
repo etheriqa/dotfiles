@@ -41,6 +41,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'vim-scripts/gtags.vim'
+NeoBundle 'vim-scripts/VimCoder.jar'
 
 let g:neocomplcache_enable_at_startup = 1
 let g:quickrun_config = {}
