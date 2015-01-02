@@ -130,6 +130,7 @@ alias v="vim"
 alias vi="vim"
 alias vie="vim -R"
 alias view="vim -R"
+alias socks="ssh -D 2222 -f -N"
 
 t() {
   if [ -z $1 ]; then
