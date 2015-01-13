@@ -88,7 +88,7 @@ nnoremap <silent> <Space>gb :<C-u>Gblame<CR>
 nnoremap <silent> <Space>gC :<C-u>Gcommit -v --amend<CR>
 nnoremap <silent> <Space>gc :<C-u>Gcommit -v<CR>
 nnoremap <silent> <Space>gd :<C-u>Gdiff<CR>
-nnoremap <silent> <Space>gg :<C-u>Ggrep<Space>
+nnoremap          <Space>gg :<C-u>Ggrep<Space>
 nnoremap <silent> <Space>gr :<C-u>Gread<CR>
 nnoremap <silent> <Space>gs :<C-u>Gstatus<CR>
 nnoremap <silent> <Space>gw :<C-u>Gwrite<CR>
