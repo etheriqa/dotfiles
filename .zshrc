@@ -62,7 +62,6 @@ PROMPT="
 %{[38;5;${colorcode-15}m%}%n@%m%{${reset_color}%}:%~ %1v
 %# "
 
-alias c="clear"
 alias g="git"
 alias ga="git add"
 alias gap="git add --patch"
@@ -125,10 +124,7 @@ alias l="ls --color -l"
 alias la="ls --color -al"
 alias lb="stdbuf -oL"
 alias ls="ls --color"
-alias s="ssh"
-alias v="vim"
 alias vi="vim"
-alias vie="vim -R"
 alias view="vim -R"
 alias socks="ssh -D 2222 -f -N"
 
