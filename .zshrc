@@ -62,7 +62,6 @@ PROMPT="
 %{[38;5;${colorcode-15}m%}%n@%m%{${reset_color}%}:%~ %1v
 %# "
 
-alias archive="tar zcvf"
 alias g="git"
 alias ga="git add"
 alias gap="git add --patch"
@@ -125,10 +124,9 @@ alias l="ls --color -l"
 alias la="ls --color -al"
 alias lb="stdbuf -oL"
 alias ls="ls --color"
-alias socks="ssh -D 2222 -f -N"
-alias unarchive="tar zxvf"
 alias vi="vim"
 alias view="vim -R"
+alias socks="ssh -D 2222 -f -N"
 
 t() {
   if [ -z $1 ]; then
