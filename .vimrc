@@ -257,6 +257,10 @@ autocmd FileType ruby SpaceIndent 2
 autocmd FileType scala SpaceIndent 2
 
 
+" Shell {{{2
+autocmd FileType sh,zsh SpaceIndent 2
+
+
 " Smarty {{{2
 autocmd FileType smarty SpaceIndent 2
 
