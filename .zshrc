@@ -124,9 +124,10 @@ alias l="ls --color -l"
 alias la="ls --color -al"
 alias lb="stdbuf -oL"
 alias ls="ls --color"
+alias reload="exec $SHELL -l"
+alias socks="ssh -D 2222 -f -N"
 alias vi="vim"
 alias view="vim -R"
-alias socks="ssh -D 2222 -f -N"
 
 t() {
   if [ -z $1 ]; then
