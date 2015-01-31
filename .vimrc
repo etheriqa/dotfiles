@@ -241,6 +241,10 @@ let g:quickrun_config['processing'] = {
   \ }
 
 
+" Python {{{2
+autocmd FileType python SpaceIndent 4
+
+
 " RSpec {{{2
 augroup QuickRunRSpec
   autocmd!
