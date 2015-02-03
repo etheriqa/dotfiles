@@ -152,7 +152,6 @@ if neobundle#is_installed("jellybeans.vim")
   colorscheme jellybeans
 endif
 set directory=~/.vim/tmp
-set shell=/bin/zsh
 set modeline
 set modelines=2
 set autoread

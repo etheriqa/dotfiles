@@ -1,8 +1,8 @@
-.PHONY: update install uninstall dotfiles vim anyenv
+.PHONY: update install uninstall symlink local vim anyenv
 
 PREFIX:=$(HOME)
 
-DOTFILES:=\
+SYMLINKS:=\
     .ctags\
     .git_templates\
     .gitconfig\
@@ -20,18 +20,34 @@ DOTFILES:=\
     .zshrc.linux\
     .zshrc\
 
+LOCALS:=\
+    .gitconfig.local\
+    .vimrc.local\
+    .zshenv.local\
+    .zshrc.local\
+
+.DEFAULT: update
+
 update:
 	git pull --rebase
+	$(MAKE) symlink
+	$(MAKE) local
 	vim -c "silent NeoBundleUpdate" -c quit
 
-install: dotfiles vim anyenv
+install: symlink local vim anyenv
 
-dotfiles:
-	ln -Fs $(foreach dotfile,$(DOTFILES),$(PWD)/$(dotfile)) $(PREFIX)
-	touch $(PREFIX)/.gitconfig.local
-	touch $(PREFIX)/.vimrc.local
-	touch $(PREFIX)/.zshrc.local
-	echo "local colorcode=nico" > $(PREFIX)/.zshenv.local
+uninstall:
+	rm -f $(foreach symlink,$(SYMLINKS),$(PREFIX)/$(symlink))
+	rm -fr $(PREFIX)/.vim
+	rm -fr $(PREFIX)/.anyenv
+
+symlink:
+	ln -fs $(foreach symlink,$(SYMLINKS),$(PWD)/$(symlink)) $(PREFIX)
+
+local:
+	touch $(foreach local,$(LOCALS),$(PREFIX)/$(local))
+	grep "local colorcode=" $(PREFIX)/.zshenv.local > /dev/null || echo "local colorcode=nico" >> $(PREFIX)/.zshenv.local
+	grep "set shell=" $(PREFIX)/.vimrc.local > /dev/null || echo "set shell=$$SHELL" >> $(PREFIX)/.vimrc.local
 
 vim:
 	mkdir -p $(PREFIX)/.vim/bundle
@@ -41,8 +57,3 @@ vim:
 
 anyenv:
 	git clone https://github.com/riywo/anyenv $(PREFIX)/.anyenv
-
-uninstall:
-	rm -f $(foreach dotfile,$(DOTFILES),$(PREFIX)/$(dotfile))
-	rm -fr $(PREFIX)/.vim
-	rm -fr $(PREFIX)/.anyenv
