@@ -9,6 +9,7 @@ DOTFILES:=\
     .gitignore\
     .gvimrc\
     .my.cnf\
+    .rprofile\
     .tigrc\
     .tmux.conf\
     .vimrc\
