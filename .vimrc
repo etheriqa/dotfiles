@@ -38,6 +38,7 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'tyru/caw.vim.git'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'vim-scripts/gtags.vim'
@@ -81,6 +82,9 @@ nnoremap <silent> tp :tabprevious<CR>
 
 vnoremap          a<Space> :Alignta<Space>
 vnoremap <silent> s :sort i<CR>
+
+nmap <silent> <C-h> <Plug>(caw:i:toggle)
+vmap <silent> <C-h> <Plug>(caw:i:toggle)
 
 
 " git {{{2
