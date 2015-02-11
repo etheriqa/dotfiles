@@ -282,6 +282,9 @@ autocmd FileType vim SpaceIndent 2
 let g:vim_indent_cont = 2
 
 
+" YAML {{{2
+autocmd FileType yaml SpaceIndent 2
+
 
 
 " load .vimrc.local {{{1
