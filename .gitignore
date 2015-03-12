@@ -1,5 +1,7 @@
 .cabal-sandbox
 .DS_Store
+*.pyc
+__pycache__
 cabal.sandbox.config
 GPATH
 GRTAGS
