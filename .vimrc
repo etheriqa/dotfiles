@@ -13,6 +13,7 @@ call neobundle#end()
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'kana/vim-filetype-haskell'
 NeoBundle 'kana/vim-smartinput'
