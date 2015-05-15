@@ -1,6 +1,7 @@
+*.pyc
 .cabal-sandbox
 .DS_Store
-*.pyc
+.python-version
 __pycache__
 cabal.sandbox.config
 GPATH
