@@ -11,6 +11,7 @@ call neobundle#end()
 
 " bundles {{{2
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'fatih/vim-go'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'hynek/vim-python-pep8-indent'
@@ -211,6 +212,10 @@ autocmd FileType cucumber SpaceIndent 2
 
 " gitconfig {{{2
 autocmd FileType gitconfig TabIndent 8
+
+
+" Golang {{{2
+autocmd FileType go TabIndent 4
 
 
 " Haskell {{{2
