@@ -283,6 +283,10 @@ autocmd FileType sql SoftIndent 2
 let g:sql_type_default='mysql'
 
 
+" TeX {{{2
+autocmd FileType tex SoftIndent 2
+
+
 " Vim script {{{2
 autocmd FileType vim SoftIndent 2
 let g:vim_indent_cont = 2
