@@ -174,14 +174,14 @@ filetype plugin indent on
 set autoindent
 set expandtab tabstop=8 softtabstop=4 shiftwidth=4
 
-command! -nargs=1 SpaceIndent
+command! -nargs=1 SoftIndent
   \ setlocal
   \ expandtab
   \ tabstop<
   \ softtabstop=<args>
   \ shiftwidth=<args>
 
-command! -nargs=1 TabIndent
+command! -nargs=1 HardIndent
   \ setlocal
   \ noexpandtab
   \ tabstop=<args>
@@ -190,52 +190,52 @@ command! -nargs=1 TabIndent
 
 
 " BIND {{{2
-autocmd FileType bindzone TabIndent 8
+autocmd FileType bindzone HardIndent 8
 
 
 " C, C++ {{{2
-autocmd FileType c,cpp SpaceIndent 2
+autocmd FileType c,cpp SoftIndent 2
 autocmd BufWinEnter,BufNewFile *.ic setlocal filetype=cpp
 
 
 " CoffeeScript {{{2
-autocmd FileType coffee SpaceIndent 2
+autocmd FileType coffee SoftIndent 2
 
 
 " CSS, SASS, SCSS {{{2
-autocmd FileType css,sass,scss SpaceIndent 2
+autocmd FileType css,sass,scss SoftIndent 2
 
 
 " Cucumber {{{2
-autocmd FileType cucumber SpaceIndent 2
+autocmd FileType cucumber SoftIndent 2
 
 
 " gitconfig {{{2
-autocmd FileType gitconfig TabIndent 8
+autocmd FileType gitconfig HardIndent 8
 
 
 " Golang {{{2
-autocmd FileType go TabIndent 4
+autocmd FileType go HardIndent 4
 
 
 " Haskell {{{2
-autocmd FileType haskell SpaceIndent 4
+autocmd FileType haskell SoftIndent 4
 
 
 " HTML {{{2
-autocmd FileType html SpaceIndent 2
+autocmd FileType html SoftIndent 2
 
 
 " JavaScript {{{2
-autocmd FileType javascript SpaceIndent 2
+autocmd FileType javascript SoftIndent 2
 
 
 " Markdown {{{2
-autocmd FileType markdown SpaceIndent 4
+autocmd FileType markdown SoftIndent 4
 
 
 " PHP {{{2
-autocmd FileType php SpaceIndent 4
+autocmd FileType php SoftIndent 4
 let php_htmlInStrings = 1
 let php_noShortTags = 1
 let php_sql_query = 1
@@ -243,7 +243,7 @@ let g:ref_phpmanual_path = expand('~/doc/php-chunked-xhtml/')
 
 
 " Processing {{{2
-autocmd FileType processing SpaceIndent 4
+autocmd FileType processing SoftIndent 4
 let g:quickrun_config['processing'] = {
   \ 'command': 'processing-java',
   \ 'exec': '%c --sketch=`dirname %s` --output=$HOME/Library/Processing --run --force'
@@ -251,7 +251,7 @@ let g:quickrun_config['processing'] = {
 
 
 " Python {{{2
-autocmd FileType python SpaceIndent 4
+autocmd FileType python SoftIndent 4
 
 
 " RSpec {{{2
@@ -263,33 +263,33 @@ let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
 
 
 " Ruby {{{2
-autocmd FileType ruby SpaceIndent 2
+autocmd FileType ruby SoftIndent 2
 
 
 " Scala {{{2
-autocmd FileType scala SpaceIndent 2
+autocmd FileType scala SoftIndent 2
 
 
 " Shell {{{2
-autocmd FileType sh,zsh SpaceIndent 2
+autocmd FileType sh,zsh SoftIndent 2
 
 
 " Smarty {{{2
-autocmd FileType smarty SpaceIndent 2
+autocmd FileType smarty SoftIndent 2
 
 
 " SQL {{{2
-autocmd FileType sql SpaceIndent 2
+autocmd FileType sql SoftIndent 2
 let g:sql_type_default='mysql'
 
 
 " Vim script {{{2
-autocmd FileType vim SpaceIndent 2
+autocmd FileType vim SoftIndent 2
 let g:vim_indent_cont = 2
 
 
 " YAML {{{2
-autocmd FileType yaml SpaceIndent 2
+autocmd FileType yaml SoftIndent 2
 
 
 
