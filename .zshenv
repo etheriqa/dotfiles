@@ -12,6 +12,7 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en
 export EDITOR=vim
 export TERM=xterm-256color
+export PATH=$HOME/bin:$PATH
 
 # anyenv
 if [ -x $HOME/.anyenv/bin/anyenv ]; then
@@ -23,5 +24,8 @@ fi
 if [ -x $HOME/.cabal/bin ]; then
   export PATH=$HOME/.cabal/bin:$PATH
 fi
+
+# golang
+export GOPATH=$HOME
 
 if [ -f $HOME/.zshenv.local ]; then . $HOME/.zshenv.local; fi
