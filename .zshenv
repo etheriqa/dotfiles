@@ -13,6 +13,7 @@ export LANGUAGE=en_US:en
 export EDITOR=vim
 export TERM=xterm-256color
 export PATH=$HOME/bin:$PATH
+export CDPATH=$HOME/src/github.com/etheriqa:$HOME/src/bitbucket.org/etheriqa:$HOME/workspace:$HOME
 
 # anyenv
 if [ -x $HOME/.anyenv/bin/anyenv ]; then
