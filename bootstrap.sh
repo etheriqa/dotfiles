@@ -1,7 +1,9 @@
 #!/bin/bash
 
-PREFIX=${PREFIX-$PWD}
+set -e
 
-git clone https://github.com/etheriqa/dotfiles.git $PREFIX/dotfiles && \
-cd $PREFIX/dotfiles && \
+PREFIX=${PREFIX-$HOME/src/github.com/etheriqa}
+
+git clone https://github.com/etheriqa/dotfiles.git $PREFIX/dotfiles
+cd $PREFIX/dotfiles
 make install PREFIX=$HOME
