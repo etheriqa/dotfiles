@@ -6,10 +6,6 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
-
-
-" bundles {{{2
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'h1mesuke/vim-alignta'
@@ -45,6 +41,9 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'vim-scripts/VimCoder.jar'
+call neobundle#end()
+
+" bundles {{{2
 
 let g:neocomplcache_enable_at_startup = 1
 let g:quickrun_config = {}
