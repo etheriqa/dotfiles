@@ -20,3 +20,5 @@
 	enabled = true
 [merge]
 	log = true
+[ghq]
+	root = ~/src
