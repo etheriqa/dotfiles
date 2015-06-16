@@ -6,6 +6,7 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'hail2u/vim-css3-syntax'
@@ -172,6 +173,8 @@ syntax enable
 filetype plugin indent on
 set autoindent
 set expandtab tabstop=8 softtabstop=4 shiftwidth=4
+
+autocmd BufWrite * :Autoformat
 
 command! -nargs=1 SoftIndent
   \ setlocal
