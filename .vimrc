@@ -175,8 +175,6 @@ filetype plugin indent on
 set autoindent
 set expandtab tabstop=8 softtabstop=4 shiftwidth=4
 
-autocmd BufWrite * :Autoformat
-
 command! -nargs=1 SoftIndent
   \ setlocal
   \ expandtab
@@ -219,6 +217,7 @@ autocmd FileType gitconfig HardIndent 8
 
 " Golang {{{2
 autocmd FileType go HardIndent 4
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 
 " Haskell {{{2
