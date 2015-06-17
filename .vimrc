@@ -233,6 +233,10 @@ autocmd FileType html SoftIndent 2
 autocmd FileType javascript SoftIndent 2
 
 
+" Less {{{2
+autocmd FileType less SoftIndent 2
+
+
 " Markdown {{{2
 autocmd FileType markdown SoftIndent 4
 
