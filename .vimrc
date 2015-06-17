@@ -8,6 +8,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'groenewege/vim-less'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'hynek/vim-python-pep8-indent'
