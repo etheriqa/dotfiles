@@ -8,6 +8,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'fatih/vim-go'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'hail2u/vim-css3-syntax'
@@ -218,7 +219,6 @@ autocmd FileType gitconfig HardIndent 8
 
 " Golang {{{2
 autocmd FileType go HardIndent 4
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 
 " Haskell {{{2
