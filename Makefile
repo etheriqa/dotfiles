@@ -1,4 +1,4 @@
-.PHONY: update install uninstall symlink local vim anyenv
+.PHONY: update install uninstall symlink local vim anyenv brew
 
 PREFIX:=$(HOME)
 
@@ -25,6 +25,20 @@ LOCALS:=\
     .vimrc.local\
     .zshenv.local\
     .zshrc.local\
+
+FORMULAE:=\
+    coreutils\
+    ctags\
+    fswatch\
+    git\
+    jq\
+    macvim\
+    parallel\
+    tig\
+    tmux\
+    vim\
+    watch\
+    zsh\
 
 .DEFAULT: update
 
@@ -57,3 +71,6 @@ vim:
 
 anyenv:
 	git clone https://github.com/riywo/anyenv $(PREFIX)/.anyenv
+
+brew:
+	brew install $(FORMULAE)
