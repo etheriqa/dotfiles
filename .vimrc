@@ -257,6 +257,10 @@ let g:quickrun_config['processing'] = {
   \ }
 
 
+" Protocol Buffers {{{2
+autocmd FileType proto SoftIndent 2
+
+
 " Python {{{2
 autocmd FileType python SoftIndent 4
 
