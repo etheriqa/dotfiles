@@ -175,7 +175,7 @@ set helplang=ja,en
 syntax enable
 filetype plugin indent on
 set autoindent
-set expandtab tabstop=8 softtabstop=4 shiftwidth=4
+set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 
 command! -nargs=1 SoftIndent
   \ setlocal
