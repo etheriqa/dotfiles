@@ -62,6 +62,7 @@ PROMPT="
 %{[38;5;${colorcode-15}m%}%n@%m%{${reset_color}%}:%~ %1v
 %# "
 
+alias dl="curl --continue-at - --location --remote-name"
 alias g="git"
 alias ga="git add"
 alias gap="git add --patch"
