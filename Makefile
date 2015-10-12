@@ -2,6 +2,7 @@ PREFIX:=$(HOME)
 
 DOTFILES:=\
     .ctags\
+    .distillery\
     .gitconfig\
     .gitignore\
     .gvimrc\
