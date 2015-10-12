@@ -3,6 +3,7 @@
 #endif
 
 #define rep(i,n) for (size_t i = 0; i < (n); i++)
+#define each(e,c) for (auto& e : c)
 using namespace std;
 using int_type = long long;
 using float_type = long double;
