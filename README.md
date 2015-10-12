@@ -7,6 +7,5 @@ PREFIX=$HOME/src/github.com/etheriqa bash <(curl -L https://github.com/etheriqa/
 ## Requirements
 
 * coreutils
-* gcc
 * git
 * make

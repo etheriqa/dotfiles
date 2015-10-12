@@ -1,0 +1,10 @@
+TARGET   = driver
+SRC      = $CLASSNAME$.cc
+CXXFLAGS = -Wall -std=c++11 -O3 -include $(HOME)/.vimcoder/includes.h
+
+.PHONY: test
+
+test: $(TARGET)
+	./$(TARGET)
+
+$(TARGET): $(SRC)
