@@ -4,7 +4,6 @@ PREFIX:=$(HOME)
 
 SYMLINKS:=\
     .ctags\
-    .git_templates\
     .gitconfig\
     .gitignore\
     .gvimrc\
