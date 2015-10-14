@@ -1,5 +1,5 @@
 TARGET   = solution
-CXXFLAGS = -Wall -std=c++11 -O3 -include g++.h -include clang++.h
+CXXFLAGS = -Wall -std=c++11 -O2 -include g++.h -include clang++.h
 
 .PHONY: test copy-g++ copy-clang++
 

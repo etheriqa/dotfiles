@@ -1,6 +1,6 @@
 TARGET   = driver
 SRC      = $CLASSNAME$.cc
-CXXFLAGS = -Wall -std=c++11 -O3 -include $(HOME)/.vimcoder/includes.h
+CXXFLAGS = -Wall -std=c++11 -O2 -include $(HOME)/.vimcoder/includes.h
 
 .PHONY: test
 
