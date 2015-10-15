@@ -8,3 +8,4 @@ test: $(TARGET)
 	./$(TARGET)
 
 $(TARGET): $(SRC)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $(TARGET) driver.cc

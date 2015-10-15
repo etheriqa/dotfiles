@@ -3,14 +3,12 @@
 using namespace std;
 using ll = long long;
 using ld = long double;
-template <class RealType> RealType inf() { return numeric_limits<RealType>::lowest(); }
-template <class RealType> RealType sup() { return numeric_limits<RealType>::max(); }
-template <class Arithmetic> void up(Arithmetic& d, Arithmetic s) { d = max(d, s); }
-template <class Arithmetic> void down(Arithmetic& d, Arithmetic s) { d = min(d, s); }
+template <class T> T inf() { return numeric_limits<T>::lowest(); }
+template <class T> T sup() { return numeric_limits<T>::max(); }
+template <class T> T& up(T& d, T s) { return d = max(d, s); }
+template <class T> T& down(T& d, T s) { return d = min(d, s); }
 template <class Key> using uset = unordered_set<Key>;
 template <class Key, class T> using umap = unordered_map<Key, T>;
-
-using namespace std;
 
 int main()
 {
