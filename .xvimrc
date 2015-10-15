@@ -1,0 +1,19 @@
+nnoremap <Space>q :quit<CR>
+nnoremap <Space>w :write<CR>
+
+nnoremap <Space>h :split<CR>
+nnoremap <Space>v :vsplit<CR>
+
+nnoremap : ;
+nnoremap ; :
+vnoremap : ;
+vnoremap ; :
+
+nnoremap <Space>r :run<CR>
+
+set relativenumber
+set laststatus=2
+
+set ignorecase
+set nohlsearch
+set incsearch

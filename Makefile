@@ -14,6 +14,7 @@ DOTFILES:=\
     .vimcoder/C++Template\
     .vimcoder/includes.h\
     .vimrc\
+    .xvimrc\
     .zshenv.darwin\
     .zshenv.linux\
     .zshenv\
@@ -34,8 +35,8 @@ dist: dotfiles localfiles
 dotfiles:
 	@for dotfile in $(DOTFILES); do \
 		directory=`dirname $(PREFIX)/$$dotfile`; \
-		mkdir -p $$directory; \
-		ln -sf $(PWD)/$$dotfile $$directory; \
+		mkdir -pv $$directory; \
+		ln -sfv $(PWD)/$$dotfile $$directory; \
 	done
 
 localfiles:
