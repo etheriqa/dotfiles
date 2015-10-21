@@ -10,8 +10,7 @@ template <class T> T& down(T& d, T s) { return d = min(d, s); }
 template <class Key> using uset = unordered_set<Key>;
 template <class Key, class T> using umap = unordered_map<Key, T>;
 
-int main()
-{
+int main() {
   cin.tie(0);
   ios::sync_with_stdio(false);
 
