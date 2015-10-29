@@ -145,7 +145,7 @@ t() {
 
 st() {
   local hostname=$1
-  local session=${2-session}
+  local session=${2-default}
   if [ -z $hostname ]; then
     echo "no hostname given"
     return 1
