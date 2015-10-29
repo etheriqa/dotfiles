@@ -4,6 +4,8 @@ export _MANPATH=${_MANPATH-$MANPATH}
 export PATH=$_PATH
 export MANPATH=$_MANPATH
 
+export PATH=${PATH}:/usr/sbin:/sbin
+
 # for homebrew
 export PATH=/usr/local/bin:${PATH}
 
