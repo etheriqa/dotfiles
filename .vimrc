@@ -115,6 +115,7 @@ nnoremap          <C-g>r :<C-u>Gtags -r<Space>
 nnoremap <Space>u<Space> :<C-u>Unite<Space>
 nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
 nnoremap <silent> <Space>uf :<C-u>Unite file<CR>
+nnoremap <silent> <Space>ug :<C-u>Unite file_rec/git<CR>
 nnoremap <silent> <Space>um :<C-u>Unite file_mru<CR>
 nnoremap <silent> <Space>ur :<C-u>Unite file_rec/async<CR>
 
