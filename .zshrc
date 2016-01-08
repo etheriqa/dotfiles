@@ -10,6 +10,7 @@ esac
 autoload -U compinit && compinit -u
 autoload -U colors && colors
 
+REPORTTIME=1
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
