@@ -1,4 +1,4 @@
-" neobundle.vim {{{1
+" NeoBundle {{{1
 filetype off
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -47,268 +47,234 @@ NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'vim-scripts/VimCoder.jar'
 call neobundle#end()
 
-" bundles {{{2
-
+" Variables
 let g:neocomplcache_enable_at_startup = 1
 let g:quickrun_config = {}
-let g:quickrun_config['*'] = {'runmode': "async:remote:vimproc", 'split': 'below'}
+let g:quickrun_config['*'] = {'runmode': 'async:remote:vimproc', 'split': 'below'}
 let g:vimfiler_as_default_explorer = 1
-let g:unite_enable_start_insert = 1
-let g:unite_source_file_mru_limit = 1000
 
 
+" Commands {{{1
+command! -nargs=0 Reload source $MYVIMRC
 
 
-" keymaps {{{1
+" Key Mapping {{{1
+let mapleader=' '
 
+" Basic
+nnoremap <silent> <Leader>c :<C-u>close<CR>
+nnoremap <silent> <Leader>q :<C-u>quit<CR>
+nnoremap <silent> <Leader>w :<C-u>write<CR>
 
-" basic {{{2
+nnoremap <silent> t1 :<C-u>tabnext 1<CR>
+nnoremap <silent> t2 :<C-u>tabnext 2<CR>
+nnoremap <silent> t3 :<C-u>tabnext 3<CR>
+nnoremap <silent> t4 :<C-u>tabnext 4<CR>
+nnoremap <silent> t5 :<C-u>tabnext 5<CR>
+nnoremap <silent> t6 :<C-u>tabnext 6<CR>
+nnoremap <silent> tc :<C-u>tabnew<CR>
+nnoremap <silent> tn :<C-u>tabnext<CR>
+nnoremap <silent> tp :<C-u>tabprevious<CR>
 
-nnoremap <silent> <Space>c :<C-u>close<CR>
-nnoremap <silent> <Space>q :<C-u>quit<CR>
-nnoremap <silent> <Space>w :<C-u>write<CR>
-
-nnoremap <silent> <Space>h :<C-u>split<CR>
-nnoremap <silent> <Space>v :<C-u>vsplit<CR>
-
-nnoremap <silent> <C-n> :<C-u>cnext<CR>
-nnoremap <silent> <C-p> :<C-u>cprevious<CR>
-nnoremap <silent> <C-c> :<C-u>cclose<CR>
+nnoremap <silent> <Leader>h :<C-u>split<CR>
+nnoremap <silent> <Leader>v :<C-u>vsplit<CR>
 
 nnoremap : ;
 nnoremap ; :
 vnoremap : ;
 vnoremap ; :
 
-
-" edit {{{2
-nnoremap <silent> tn :tabnext<CR>
-nnoremap <silent> tp :tabprevious<CR>
-
+" Edit
 vnoremap          a<Space> :Alignta<Space>
 vnoremap <silent> s :sort i<CR>
 
 nmap <silent> <C-h> <Plug>(caw:i:toggle)
 vmap <silent> <C-h> <Plug>(caw:i:toggle)
 
+" Unite
+call unite#custom#profile('default', 'context', {
+  \ 'split': 0,
+  \ })
 
-" git {{{2
-nnoremap <silent> <Space>gb :<C-u>Gblame<CR>
-nnoremap <silent> <Space>gC :<C-u>Gcommit -v --amend<CR>
-nnoremap <silent> <Space>gc :<C-u>Gcommit -v<CR>
-nnoremap <silent> <Space>gd :<C-u>Gdiff<CR>
-nnoremap          <Space>gg :<C-u>Ggrep<Space>
-nnoremap <silent> <Space>gr :<C-u>Gread<CR>
-nnoremap <silent> <Space>gs :<C-u>Gstatus<CR>
-nnoremap <silent> <Space>gw :<C-u>Gwrite<CR>
+let s:unite_source_grep_git_context = {
+  \ 'custom_grep_command': 'git',
+  \ 'custom_grep_default_opts': 'grep -inH',
+  \ 'custom_grep_recursive_opt': '',
+  \ }
 
+function! s:unite_grep_git()
+  call unite#start([['grep', '!']], s:unite_source_grep_git_context)
+endfunction
 
-" global {{{2
-nnoremap          <C-g><Space> :<C-u>Gtags<Space>
-nnoremap <silent> <C-g>c :<C-u>GtagsCursor<CR>
-nnoremap <silent> <C-g>f :<C-u>Gtags -f %<CR>
-nnoremap          <C-g>g :<C-u>Gtags -g<Space>
-nnoremap          <C-g>r :<C-u>Gtags -r<Space>
+function! s:unite_grep_git_cursor()
+  let context = deepcopy(s:unite_source_grep_git_context)
+  let context.input = expand('<cword>')
+  call unite#start([['grep', '!']], context)
+endfunction
 
+nnoremap <silent> <Leader>b :<C-u>Unite buffer<CR>
+nnoremap <silent> <Leader>f :<C-u>Unite -start-insert file file/new<CR>
+nnoremap <silent> <Leader>gg :<C-u>call <SID>unite_grep_git()<CR>
+nnoremap <silent> <Leader>gw :<C-u>call <SID>unite_grep_git_cursor()<CR>
+nnoremap <silent> <Leader>p :<C-u>Unite -start-insert file_rec/git<CR>
+nnoremap <silent> <Leader>r :<C-u>UniteResume<CR>
+nnoremap <silent> <Leader>u :<C-u>Unite -start-insert<CR>
 
-" unite {{{2
-nnoremap <Space>u<Space> :<C-u>Unite<Space>
-nnoremap <silent> <Space>ub :<C-u>Unite buffer<CR>
-nnoremap <silent> <Space>uf :<C-u>Unite file<CR>
-nnoremap <silent> <Space>ug :<C-u>Unite file_rec/git<CR>
-nnoremap <silent> <Space>um :<C-u>Unite file_mru<CR>
-
-
-" others {{{2
-nnoremap <Space>f :<C-u>VimFiler<CR>
-nnoremap <Space>r :<C-u>QuickRun<CR>
-nnoremap <Space>s :<C-u>VimShell<CR>
-
+" Others
+nnoremap          <Leader>R :<C-u>Reload<CR>
 
 
-
-" display {{{1
-set relativenumber
-set laststatus=2
-set foldmethod=marker
+" Appearance {{{1
 set ambiwidth=double
-
-
-
-
-" search {{{1
-set ignorecase
-set nohlsearch
-set incsearch
-
-
-
-
-" edit {{{1
-set encoding=utf-8
-set fileencodings=utf-8,euc-jp,sjis
-set fileencoding=utf-8
-set fileformats=unix,dos,mac
-set fileformat=unix
-set autoindent
-set history=100
-set undolevels=1000
-set showcmd
-set list
-set listchars=tab:➭\ ,trail:-
 set background=dark
-if neobundle#is_installed("jellybeans.vim")
+set helplang=ja,en
+set laststatus=2
+set list
+set listchars=tab:🏳\ ,trail:🔥
+set relativenumber
+set showcmd
+
+if neobundle#is_installed('jellybeans.vim')
   colorscheme jellybeans
 endif
+
+
+" Search {{{1
+set ignorecase
+set incsearch
+set nohlsearch
+set smartcase
+
+
+" Edit {{{1
+set autoread
 set directory=~/.vim/tmp
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,euc-jp,sjis
+set fileformat=unix
+set fileformats=unix,dos,mac
+set history=100
 set modeline
 set modelines=2
-set autoread
+set undolevels=1000
 set updatetime=100
-set helplang=ja,en
 
 
+" Filetypes {{{1
 
-
-" filetype {{{1
-" default {{{2
+" Default
 syntax enable
 filetype plugin indent on
 set autoindent
 set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 
-command! -nargs=1 SoftIndent
-  \ setlocal
-  \ expandtab
-  \ tabstop<
-  \ softtabstop=<args>
-  \ shiftwidth=<args>
+" Functions
+function! s:indent_soft(width)
+  setlocal expandtab
+  let &l:tabstop = a:width
+  let &l:softtabstop = a:width
+  let &l:shiftwidth = a:width
+endfunction
 
-command! -nargs=1 HardIndent
-  \ setlocal
-  \ noexpandtab
-  \ tabstop=<args>
-  \ softtabstop=0
-  \ shiftwidth=<args>
+function! s:indent_hard(width)
+  setlocal noexpandtab
+  let &l:tabstop = a:width
+  let &l:softtabstop = a:width
+  let &l:shiftwidth = a:width
+endfunction
 
+" BIND
+autocmd! FileType bindzone call s:indent_hard(8)
 
-" BIND {{{2
-autocmd FileType bindzone HardIndent 8
+" C, C++
+autocmd! FileType c,cpp call s:indent_soft(2)
+autocmd! BufWinEnter,BufNewFile *.ic setlocal filetype=cpp
 
+" CoffeeScript
+autocmd! FileType coffee call s:indent_soft(2)
 
-" C, C++ {{{2
-autocmd FileType c,cpp SoftIndent 2
-autocmd BufWinEnter,BufNewFile *.ic setlocal filetype=cpp
+" CSS, SASS, SCSS
+autocmd! FileType css,sass,scss call s:indent_soft(2)
 
+" Cucumber
+autocmd! FileType cucumber call s:indent_soft(2)
 
-" CoffeeScript {{{2
-autocmd FileType coffee SoftIndent 2
+" gitconfig
+autocmd! FileType gitconfig call s:indent_hard(8)
 
+" Golang
+autocmd! FileType go call s:indent_hard(4)
 
-" CSS, SASS, SCSS {{{2
-autocmd FileType css,sass,scss SoftIndent 2
+" Haskell
+autocmd! FileType haskell call s:indent_soft(4)
 
+" HTML
+autocmd! FileType html call s:indent_soft(2)
 
-" Cucumber {{{2
-autocmd FileType cucumber SoftIndent 2
+" JavaScript
+autocmd! FileType javascript call s:indent_soft(2)
 
+" Less
+autocmd! FileType less call s:indent_soft(2)
 
-" gitconfig {{{2
-autocmd FileType gitconfig HardIndent 8
+" Markdown
+autocmd! FileType markdown call s:indent_soft(4)
 
-
-" Golang {{{2
-autocmd FileType go HardIndent 4
-
-
-" Haskell {{{2
-autocmd FileType haskell SoftIndent 4
-
-
-" HTML {{{2
-autocmd FileType html SoftIndent 2
-
-
-" JavaScript {{{2
-autocmd FileType javascript SoftIndent 2
-
-
-" Less {{{2
-autocmd FileType less SoftIndent 2
-
-
-" Markdown {{{2
-autocmd FileType markdown SoftIndent 4
-
-
-" PHP {{{2
-autocmd FileType php SoftIndent 4
+" PHP
+autocmd! FileType php call s:indent_soft(4)
 let php_htmlInStrings = 1
 let php_noShortTags = 1
 let php_sql_query = 1
 let g:ref_phpmanual_path = expand('~/doc/php-chunked-xhtml/')
 
-
-" Processing {{{2
-autocmd FileType processing SoftIndent 4
+" Processing
+autocmd! FileType processing call s:indent_soft(4)
 let g:quickrun_config['processing'] = {
   \ 'command': 'processing-java',
   \ 'exec': '%c --sketch=`dirname %s` --output=$HOME/Library/Processing --run --force'
   \ }
 
+" Protocol Buffers
+autocmd! FileType proto call s:indent_soft(2)
 
-" Protocol Buffers {{{2
-autocmd FileType proto SoftIndent 2
+" Python
+autocmd! FileType python call s:indent_soft(4)
 
-
-" Python {{{2
-autocmd FileType python SoftIndent 4
-
-
-" RSpec {{{2
+" RSpec
 augroup QuickRunRSpec
-  autocmd!
-  autocmd BufWinEnter,BufNewFile *_spec.rb setlocal filetype=ruby.rspec
+  autocmd! BufWinEnter,BufNewFile *_spec.rb setlocal filetype=ruby.rspec
 augroup END
 let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
 
+" Ruby
+autocmd! FileType ruby call s:indent_soft(2)
 
-" Ruby {{{2
-autocmd FileType ruby SoftIndent 2
+" Scala
+autocmd! FileType scala call s:indent_soft(2)
 
+" Shell
+autocmd! FileType sh,zsh call s:indent_soft(2)
 
-" Scala {{{2
-autocmd FileType scala SoftIndent 2
+" Smarty
+autocmd! FileType smarty call s:indent_soft(2)
 
-
-" Shell {{{2
-autocmd FileType sh,zsh SoftIndent 2
-
-
-" Smarty {{{2
-autocmd FileType smarty SoftIndent 2
-
-
-" SQL {{{2
-autocmd FileType sql SoftIndent 2
+" SQL
+autocmd! FileType sql call s:indent_soft(2)
 let g:sql_type_default='mysql'
 
+" TeX
+autocmd! FileType tex call s:indent_soft(2)
 
-" TeX {{{2
-autocmd FileType tex SoftIndent 2
-
-
-" Vim script {{{2
-autocmd FileType vim SoftIndent 2
+" Vim script {
+autocmd! FileType vim call s:indent_soft(2)
 let g:vim_indent_cont = 2
 
-
-" YAML {{{2
-autocmd FileType yaml SoftIndent 2
-
+" YAML
+autocmd! FileType yaml call s:indent_soft(2)
 
 
-" load .vimrc.local {{{1
+" .vimrc.local {{{1
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
