@@ -93,6 +93,8 @@ alias gfa="git fetch --prune --all"
 alias gfo="git fetch --prune origin"
 alias gfu="git fetch --prune upstream"
 alias gg="git grep"
+alias ggl="git grep --name-only"
+alias gl="git ls-files"
 alias gm="git merge --no-ff"
 alias gma="git merge --abort"
 alias gmc="git merge --continue"
@@ -136,6 +138,7 @@ alias reload="exec $SHELL -l"
 alias socks="ssh -D 2222 -f -N"
 alias vi="vim"
 alias view="vim -R"
+alias x="xargs"
 
 t() {
   local session=${1-default}
