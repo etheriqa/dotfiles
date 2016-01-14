@@ -56,6 +56,20 @@ let g:vimfiler_as_default_explorer = 1
 
 " Commands {{{1
 command! -nargs=0 Reload source $MYVIMRC
+command! -nargs=0 -bang WASD call <SID>wasd_switch('<bang>')
+function! s:wasd_switch(bang)
+  if a:bang == ''
+    nnoremap w k
+    nnoremap a h
+    nnoremap s j
+    nnoremap d l
+  else
+    nunmap w
+    nunmap a
+    nunmap s
+    nunmap d
+  endif
+endfunction
 
 
 " Key Mapping {{{1
