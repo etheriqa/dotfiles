@@ -76,7 +76,6 @@ endfunction
 let mapleader=' '
 
 " Basic
-nnoremap <silent> <Leader>c :<C-u>close<CR>
 nnoremap <silent> <Leader>q :<C-u>quit<CR>
 nnoremap <silent> <Leader>w :<C-u>write<CR>
 
@@ -110,27 +109,43 @@ call unite#custom#profile('default', 'context', {
   \ 'split': 0,
   \ })
 
-let s:unite_source_grep_git_context = {
+let s:unite_source_grep_context_git = {
   \ 'custom_grep_command': 'git',
   \ 'custom_grep_default_opts': 'grep -inH',
   \ 'custom_grep_recursive_opt': '',
   \ }
 
-function! s:unite_grep_git()
-  call unite#start([['grep', '!']], s:unite_source_grep_git_context)
+function! s:unite_cursor_contextual()
+  if finddir('.git', getcwd()) != ''
+    let context = deepcopy(s:unite_source_grep_context_git)
+    let context.input = expand('<cword>')
+    call unite#start([['grep', '!']], context)
+  else
+    call unite#start([['grep', getcwd(), '', expand('<cword>')]])
+  endif
 endfunction
 
-function! s:unite_grep_git_cursor()
-  let context = deepcopy(s:unite_source_grep_git_context)
-  let context.input = expand('<cword>')
-  call unite#start([['grep', '!']], context)
+function! s:unite_grep_contextual()
+  if finddir('.git', getcwd()) != ''
+    call unite#start([['grep', '!']], s:unite_source_grep_context_git)
+  else
+    call unite#start([['grep', getcwd()]])
+  endif
+endfunction
+
+function! s:unite_project_contextual()
+  if finddir('.git', getcwd()) != ''
+    call unite#start(['file_rec/git'], {'start_insert': 1})
+  else
+    call unite#start(['file_rec/async'], {'start_insert': 1})
+  endif
 endfunction
 
 nnoremap <silent> <Leader>b :<C-u>Unite buffer<CR>
+nnoremap <silent> <Leader>c :<C-u>call <SID>unite_cursor_contextual()<CR>
 nnoremap <silent> <Leader>f :<C-u>Unite -start-insert file file/new<CR>
-nnoremap <silent> <Leader>gg :<C-u>call <SID>unite_grep_git()<CR>
-nnoremap <silent> <Leader>gw :<C-u>call <SID>unite_grep_git_cursor()<CR>
-nnoremap <silent> <Leader>p :<C-u>Unite -start-insert file_rec/git<CR>
+nnoremap <silent> <Leader>g :<C-u>call <SID>unite_grep_contextual()<CR>
+nnoremap <silent> <Leader>p :<C-u>call <SID>unite_project_contextual()<CR>
 nnoremap <silent> <Leader>r :<C-u>UniteResume<CR>
 nnoremap <silent> <Leader>u :<C-u>Unite -start-insert<CR>
 
