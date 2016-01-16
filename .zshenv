@@ -7,13 +7,14 @@ case $OSTYPE in
     ;;
 esac
 
-export LC_ALL=en_US.UTF-8
+export CDPATH=$HOME/src/github.com/etheriqa:$HOME/src/bitbucket.org/etheriqa:$HOME/workspace:$HOME/src:$HOME
+export EDITOR=vim
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en
-export EDITOR=vim
-export TERM=xterm-256color
+export LC_ALL=en_US.UTF-8
+export LESS="--LONG-PROMPT --RAW-CONTROL-CHARS"
 export PATH=$HOME/bin:$PATH
-export CDPATH=$HOME/src/github.com/etheriqa:$HOME/src/bitbucket.org/etheriqa:$HOME/workspace:$HOME/src:$HOME
+export TERM=xterm-256color
 
 # anyenv
 if [ -x $HOME/.anyenv/bin/anyenv ]; then
