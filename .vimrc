@@ -141,6 +141,7 @@ function! s:unite_project_contextual()
   endif
 endfunction
 
+nnoremap <silent> /         :<C-u>Unite line:forward -start-insert<CR>
 nnoremap <silent> <Leader>b :<C-u>Unite buffer<CR>
 nnoremap <silent> <Leader>c :<C-u>call <SID>unite_cursor_contextual()<CR>
 nnoremap <silent> <Leader>f :<C-u>Unite -start-insert file file/new<CR>
@@ -148,6 +149,7 @@ nnoremap <silent> <Leader>g :<C-u>call <SID>unite_grep_contextual()<CR>
 nnoremap <silent> <Leader>p :<C-u>call <SID>unite_project_contextual()<CR>
 nnoremap <silent> <Leader>r :<C-u>UniteResume<CR>
 nnoremap <silent> <Leader>u :<C-u>Unite -start-insert<CR>
+nnoremap <silent> ?         :<C-u>Unite line:backward -start-insert<CR>
 
 " Others
 nnoremap          <Leader>R :<C-u>Reload<CR>
