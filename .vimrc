@@ -115,13 +115,27 @@ let s:unite_source_grep_context_git = {
   \ 'custom_grep_recursive_opt': '',
   \ }
 
-function! s:unite_cursor_contextual()
+function! s:unite_cword_contextual()
   if finddir('.git', getcwd()) != ''
     let context = deepcopy(s:unite_source_grep_context_git)
     let context.input = expand('<cword>')
     call unite#start([['grep', '!']], context)
   else
     call unite#start([['grep', getcwd(), '', expand('<cword>')]])
+  endif
+endfunction
+
+function! s:unite_cfile_contextual()
+  if finddir('.git', getcwd()) != ''
+    call unite#start(['file_rec/git'], {
+      \ 'input': expand('<cfile>'),
+      \ 'force_immediately': 1,
+      \ })
+  else
+    call unite#start(['file_rec/async'], {
+      \ 'input': expand('<cfile>'),
+      \ 'force_immediately': 1,
+      \ })
   endif
 endfunction
 
@@ -141,10 +155,15 @@ function! s:unite_project_contextual()
   endif
 endfunction
 
+function! s:unite_file()
+  call unite#start(['file', 'file/new', 'directory/new'], {'start_insert': 1})
+endfunction
+
 nnoremap <silent> /         :<C-u>Unite line:forward -start-insert<CR>
 nnoremap <silent> <Leader>b :<C-u>Unite buffer<CR>
-nnoremap <silent> <Leader>c :<C-u>call <SID>unite_cursor_contextual()<CR>
-nnoremap <silent> <Leader>f :<C-u>Unite -start-insert file file/new<CR>
+nnoremap <silent> <Leader>c :<C-u>call <SID>unite_cword_contextual()<CR>
+nnoremap <silent> <Leader>C :<C-u>call <SID>unite_cfile_contextual()<CR>
+nnoremap <silent> <Leader>f :<C-u>call <SID>unite_file()<CR>
 nnoremap <silent> <Leader>g :<C-u>call <SID>unite_grep_contextual()<CR>
 nnoremap <silent> <Leader>p :<C-u>call <SID>unite_project_contextual()<CR>
 nnoremap <silent> <Leader>r :<C-u>UniteResume<CR>
