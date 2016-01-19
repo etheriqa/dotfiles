@@ -180,7 +180,7 @@ set background=dark
 set helplang=ja,en
 set laststatus=2
 set list
-set listchars=tab:🏳\ ,trail:🔥
+set listchars=tab:➭\ ,trail:🍣
 set relativenumber
 set showcmd
 
