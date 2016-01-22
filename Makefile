@@ -8,6 +8,7 @@ DOTFILES:=\
     .gvimrc\
     .my.cnf\
     .rprofile\
+    .sqliterc\
     .tigrc\
     .tmux.conf\
     .vimcoder/C++Makefile\
