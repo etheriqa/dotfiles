@@ -140,6 +140,19 @@ alias vi="vim"
 alias view="vim -R"
 alias x="xargs"
 
+pomodoro() {
+  for i in $(seq 6); do
+    echo "$(date +%H:%M:%S) #$i      " | tee /dev/stderr | write $(whoami)
+    sleep 1500
+    if [ $i -eq 6 ]; then
+      echo "$(date +%H:%M:%S) END     " | tee /dev/stderr | write $(whoami)
+    else
+      echo "$(date +%H:%M:%S) INTERVAL" | tee /dev/stderr | write $(whoami)
+      sleep 300
+    fi
+  done
+}
+
 t() {
   local session=${1-default}
   if tmux has -t $session 2> /dev/null; then
