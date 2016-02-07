@@ -268,6 +268,9 @@ autocmd! FileType javascript call s:indent_soft(2)
 " Less
 autocmd! FileType less call s:indent_soft(2)
 
+" Lua
+autocmd! FileType lua call s:indent_soft(2)
+
 " Markdown
 autocmd! FileType markdown call s:indent_soft(4)
 
