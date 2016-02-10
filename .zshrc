@@ -63,6 +63,7 @@ PROMPT="
 %{[38;5;${colorcode-15}m%}%n@%m%{${reset_color}%}:%~ %1v
 %# "
 
+alias crawl="wget --recursive --wait=1 --random-wait --convert-links"
 alias dl="curl --continue-at - --location --remote-name"
 alias g="git"
 alias ga="git add"
