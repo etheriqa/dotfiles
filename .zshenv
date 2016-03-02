@@ -15,6 +15,7 @@ export LC_ALL=en_US.UTF-8
 export LESS="--LONG-PROMPT --RAW-CONTROL-CHARS"
 export PATH=$HOME/bin:$PATH
 export TERM=xterm-256color
+export GREP_OPTIONS="--color=auto"
 
 # anyenv
 if [ -x $HOME/.anyenv/bin/anyenv ]; then
