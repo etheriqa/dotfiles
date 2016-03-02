@@ -30,4 +30,9 @@ fi
 # golang
 export GOPATH=$HOME
 
+# docker-machine
+if command which -s docker-machine; then
+  eval "$(docker-machine env default)"
+fi
+
 if [ -f $HOME/.zshenv.local ]; then . $HOME/.zshenv.local; fi
