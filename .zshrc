@@ -23,9 +23,10 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 bindkey -v
 
 autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats ' [%s:%b]'
+zstyle ':vcs_info:*' actionformats ' [%s:%b|%a]'
 precmd() {
-  psvar=()
-  LANG=en_US.UTF-8 vcs_info
+  vcs_info
   psvar[1]=$vcs_info_msg_0_
 }
 
@@ -60,7 +61,7 @@ case $colorcode in
 esac
 
 PROMPT="
-%{[38;5;${colorcode-15}m%}%n@%m%{${reset_color}%}:%~ %1v
+%{[38;5;${colorcode-15}m%}%n@%m%{${reset_color}%}:%~%1v
 %# "
 
 alias crawl="wget --recursive --wait=1 --random-wait --convert-links"
