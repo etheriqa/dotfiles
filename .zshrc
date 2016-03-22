@@ -141,6 +141,7 @@ alias socks="ssh -D 2222 -f -N"
 alias vi="vim"
 alias view="vim -R"
 alias x="xargs"
+alias x1="xargs -n1"
 
 pomodoro() {
   for i in $(seq 6); do
