@@ -1,8 +1,6 @@
 [user]
 	name = TAKAMORI Kaede
 	email = etheriqa@gmail.com
-[include]
-	path = ~/.gitconfig.local
 [color]
 	ui = auto
 [core]
