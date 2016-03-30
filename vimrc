@@ -42,7 +42,6 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tyru/caw.vim.git'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vim-go-extra'
-NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'vim-scripts/VimCoder.jar'
 call neobundle#end()
@@ -177,7 +176,6 @@ nnoremap          <Leader>R :<C-u>Reload<CR>
 " Appearance {{{1
 set ambiwidth=double
 set background=dark
-set helplang=ja,en
 set laststatus=2
 set list
 set listchars=tab:➭\ ,trail:🍣
