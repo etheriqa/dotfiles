@@ -215,7 +215,7 @@ set updatetime=100
 syntax enable
 filetype plugin indent on
 set autoindent
-set expandtab tabstop=4 softtabstop=4 shiftwidth=4
+set noexpandtab tabstop=8 softtabstop=8 shiftwidth=8
 
 " Functions
 function! s:indent_soft(width)
@@ -238,6 +238,9 @@ autocmd! FileType bindzone call s:indent_hard(8)
 " C, C++
 autocmd! FileType c,cpp call s:indent_soft(2)
 autocmd! BufWinEnter,BufNewFile *.ic setlocal filetype=cpp
+
+" CMake
+autocmd! FileType cmake call s:indent_soft(2)
 
 " CoffeeScript
 autocmd! FileType coffee call s:indent_soft(2)
@@ -303,6 +306,9 @@ autocmd! FileType ruby call s:indent_soft(2)
 
 " Scala
 autocmd! FileType scala call s:indent_soft(2)
+
+" Scheme
+autocmd! FileType scheme call s:indent_soft(2)
 
 " Shell
 autocmd! FileType sh,zsh call s:indent_soft(2)
