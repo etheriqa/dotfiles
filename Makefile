@@ -42,13 +42,13 @@ uninstall:
 	done
 
 $(HOME)/.profile:
-	echo ". $(PWD)/profile\nexport ENV=$(PWD)/env" > $@
+	echo ". $(PWD)/profile\nexport ENV=$(PWD)/rc" > $@
 
 $(HOME)/.bash_profile:
-	echo ". $(PWD)/profile\n. $(PWD)/env" > $@
+	echo ". $(PWD)/profile\n. $(PWD)/rc" > $@
 
 $(HOME)/.bashrc:
-	echo ". $(PWD)/env" > $@
+	echo ". $(PWD)/rc" > $@
 
 $(HOME)/.zprofile:
 	echo ". $(PWD)/profile" > $@

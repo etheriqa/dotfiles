@@ -1,14 +1,14 @@
 # vim: ft=sh
 
-env_darwin(){
+rc_darwin(){
   alias lp="time nice -n $(getconf NZERO)"
 }
 
-env_linux(){
+rc_linux(){
   alias lp="time ionice -c2 -n7 nice -n $(getconf NZERO)"
 }
 
-env_base(){
+rc_base(){
   local n_processors=$(getconf _NPROCESSORS_ONLN)
 
   alias crawl="wget --convert-links --no-parent --random-wait --recursive --wait=1"
@@ -125,12 +125,12 @@ env_base(){
 }
 
 case $OSTYPE in
-  darwin*) env_darwin ;;
-  linux*) env_linux ;;
+  darwin*) rc_darwin ;;
+  linux*) rc_linux ;;
 esac
 
-env_base
+rc_base
 
-unset -f env_darwin
-unset -f env_linux
-unset -f env_base
+unset -f rc_darwin
+unset -f rc_linux
+unset -f rc_base

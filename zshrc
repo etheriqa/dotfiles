@@ -55,4 +55,4 @@ PROMPT="
 %{[38;5;${colorcode-15}m%}%n@%m%{${reset_color}%}:%~%1v
 %# "
 
-. $(dirname $0)/env
+. $(dirname $0)/rc
