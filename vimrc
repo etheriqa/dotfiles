@@ -251,6 +251,9 @@ autocmd! FileType css,sass,scss call s:indent_soft(2)
 " Cucumber
 autocmd! FileType cucumber call s:indent_soft(2)
 
+" Erlang
+autocmd! FileType erlang call s:indent_soft(4)
+
 " gitconfig
 autocmd! FileType gitconfig call s:indent_hard(8)
 
