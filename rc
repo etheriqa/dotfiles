@@ -64,6 +64,7 @@ rc_base(){
   alias grbc="git rebase --continue"
   alias grbi="git rebase --interactive"
   alias grbs="git rebase --skip"
+  alias grep="grep --color=auto"
   alias grh="git reset --hard"
   alias grm="git rm -r"
   alias grr="git remote rm"
