@@ -80,7 +80,7 @@ rc_base(){
   alias gt="git tag"
   alias l="ls --color -l"
   alias la="ls --color -al"
-  alias lb="stdbuf -oL"
+  alias lb="stdbuf --input=L --output=L"
   alias ls="ls --color"
   alias make="make --jobs $n_processors"
   alias par="parallel --eta --jobs $n_processors --progress"
