@@ -178,7 +178,7 @@ set ambiwidth=double
 set background=dark
 set laststatus=2
 set list
-set listchars=tab:➭\ ,trail:🍣
+set listchars=tab:➭\ ,trail:_
 set relativenumber
 set showcmd
 
