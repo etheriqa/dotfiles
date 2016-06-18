@@ -326,6 +326,9 @@ let g:sql_type_default='mysql'
 " TeX
 autocmd! FileType tex call s:indent_soft(2)
 
+" Verilog
+autocmd! FileType verilog,systemverilog call s:indent_soft(2)
+
 " Vim script {
 autocmd! FileType vim call s:indent_soft(2)
 let g:vim_indent_cont = 2
