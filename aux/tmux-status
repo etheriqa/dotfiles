@@ -1,0 +1,10 @@
+#!/bin/bash
+
+case $OSTYPE in
+  darwin*)
+    pmset -g ps | grep --only-matching "[[:digit:]]\+%" | tr -d "\n"
+    command echo -n " | "
+    ;;
+esac
+
+date "+%Y-%m-%d %H:%M:%S "
