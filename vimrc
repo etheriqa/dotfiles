@@ -158,8 +158,8 @@ function! s:unite_file()
   call unite#start(['file', 'file/new', 'directory/new'], {'start_insert': 1})
 endfunction
 
-nnoremap <silent> /         :<C-u>Unite line:forward -start-insert<CR>
-nnoremap <silent> <Leader>b :<C-u>Unite buffer<CR>
+nnoremap <silent> <Leader>/ :<C-u>Unite line:forward -start-insert<CR>
+nnoremap <silent> <Leader>b :<C-u>Unite buffer -start-insert<CR>
 nnoremap <silent> <Leader>c :<C-u>call <SID>unite_cword_contextual()<CR>
 nnoremap <silent> <Leader>C :<C-u>call <SID>unite_cfile_contextual()<CR>
 nnoremap <silent> <Leader>f :<C-u>call <SID>unite_file()<CR>
@@ -167,7 +167,7 @@ nnoremap <silent> <Leader>g :<C-u>call <SID>unite_grep_contextual()<CR>
 nnoremap <silent> <Leader>p :<C-u>call <SID>unite_project_contextual()<CR>
 nnoremap <silent> <Leader>r :<C-u>UniteResume<CR>
 nnoremap <silent> <Leader>u :<C-u>Unite -start-insert<CR>
-nnoremap <silent> ?         :<C-u>Unite line:backward -start-insert<CR>
+nnoremap <silent> <Leader>? :<C-u>Unite line:backward -start-insert<CR>
 
 " Others
 nnoremap          <Leader>R :<C-u>Reload<CR>
